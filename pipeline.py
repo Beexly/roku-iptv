@@ -41,7 +41,10 @@ MIN_PUBLISH = 400          # hard floor, never publish below this
 # yesterday's "live" verdict within a day, otherwise channels that died
 # yesterday stay in the playlist for the whole TTL and the list rots.
 CACHE_TTL_DAYS = float(os.environ.get("IPTV_CACHE_TTL_DAYS", "1"))
-CACHE_RETRY_DAYS = float(os.environ.get("IPTV_CACHE_RETRY_DAYS", "1"))
+# Failures are retried far sooner than successes. A failed probe is often a
+# transient blip (timeout on a busy CDN edge), and a day-long blind spot
+# silently removes good channels from the list.
+CACHE_RETRY_DAYS = float(os.environ.get("IPTV_CACHE_RETRY_DAYS", "0.25"))
 CACHE_MAX_DAYS = 21        # forget a channel entirely after this long
 
 
@@ -211,6 +214,87 @@ def country_ok(info, name, source):
     return True
 
 
+# Country suffixes seen in iptv-org tvg-ids. A US-focused list should not
+# carry Serbian, Dutch, Indian or Brazilian feeds wearing a "Sports" label.
+NON_US_COUNTRIES = {
+    "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cl", "cn", "co", "cz",
+    "de", "dk", "ee", "eg", "es", "fi", "fr", "gr", "hk", "hr", "hu", "id",
+    "ie", "il", "in", "is", "it", "jp", "kr", "lt", "lv", "mx", "my", "nl",
+    "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "se", "sg", "si", "sk",
+    "th", "tr", "tw", "ua", "uk", "vn", "za",
+}
+# A few of these are legitimately US-facing: keep them.
+US_ALLOWED = {"ca"}
+
+
+def tvg_country(tvg):
+    """Extract the country code from an iptv-org tvg-id like 'CNN.us@SD'."""
+    if not tvg:
+        return ""
+    base = tvg.split("@")[0]
+    if "." not in base:
+        return ""
+    code = base.rsplit(".", 1)[-1].lower()
+    return code if code.isalpha() and 2 <= len(code) <= 3 else ""
+
+
+def variant_rank(tvg, info):
+    """Prefer the best variant of a channel: US feed, then HD, then larger."""
+    score = 0
+    suffix = tvg.split("@")[1].lower() if "@" in tvg else ""
+    if suffix in ("unitedstates", "us", "east", "west", "national"):
+        score += 100
+    if suffix in ("hd", "fhd"):
+        score += 40
+    elif suffix == "sd":
+        score += 10
+    m = re.search(r"\((\d{3,4})p\)", display_name(info))
+    if m:
+        score += min(int(m.group(1)), 2160) // 24
+    return score
+
+
+def channel_key(info):
+    """Dedup key. The tvg-id base is the channel identity; the @SD/@HD suffix
+    is a quality/region variant of the SAME channel, so it must not create
+    a second row. Falls back to a normalized name when there is no tvg-id."""
+    tvg = (field(info, "tvg-id") or "").strip()
+    if tvg:
+        return tvg.split("@")[0].lower()
+    return "n:" + loose_key(display_name(info))
+
+
+# Source feeds use placeholder group labels that mean nothing to a viewer.
+# "Undefined" is iptv-org's label for a channel with no category; "Generic"
+# and "Other" are HerbertHe's. Collapse them into a real category.
+GROUP_ALIAS = {
+    "undefined": "General",
+    "generic": "General",
+    "other": "General",
+    "x_other": "General",
+    "movies;series": "Movies",
+    "series;movies": "Movies",
+    "entertainment;movies": "Entertainment",
+    "movies;entertainment": "Entertainment",
+    "news;sports": "News",
+    "sports;news": "Sports",
+    "kids;animation": "Kids",
+    "animation;kids": "Kids",
+}
+
+
+def normalize_group(info):
+    """Rewrite a placeholder group label to a real category."""
+    group = field(info, "group-title")
+    if not group:
+        return info
+    key = group.strip().lower()
+    if key not in GROUP_ALIAS:
+        return info
+    return info.replace('group-title="%s"' % group,
+                        'group-title="%s"' % GROUP_ALIAS[key], 1)
+
+
 def rank_key(info):
     group = (field(info, "group-title") or "").lower()
     first = group.split(";")[0].strip()
@@ -304,7 +388,7 @@ def main():
     now = time.time()
 
     # ---- ingest
-    merged = {}   # key -> dict(info, url, weight, name, tvg)
+    merged = {}   # key -> dict(info, url, weight, name, tvg, alts)
     for src in SOURCES:
         try:
             text = fetch(src["url"])
@@ -313,6 +397,7 @@ def main():
             continue
         rows = parse_m3u(text)
         kept = 0
+        dropped_country = 0
         for info, url in rows:
             name = display_name(info)
             group = field(info, "group-title")
@@ -322,23 +407,36 @@ def main():
                 continue
             if src.get("sports_only") and "sports" not in group.lower():
                 continue
-            tvg = field(info, "tvg-id")
-            key = tvg.strip().lower() if tvg.strip() else "n:" + loose_key(name)
-            if not tvg.strip():
-                key = "n:" + loose_key(name)
+            tvg = field(info, "tvg-id").strip()
+            # A US-focused list should not carry foreign feeds that merely
+            # carry a "Sports" or "Movies" group label.
+            ccode = tvg_country(tvg)
+            if (ccode and ccode not in US_ALLOWED
+                    and ccode in NON_US_COUNTRIES):
+                dropped_country += 1
+                continue
+            key = channel_key(info)
+            cand = {"info": normalize_group(info), "url": url,
+                    "weight": src["weight"],
+                    "name": name, "tvg": tvg, "src": src["id"],
+                    "variant": variant_rank(tvg, info)}
             prev = merged.get(key)
             if prev is None:
-                merged[key] = {"info": info, "url": url, "weight": src["weight"],
-                               "name": name, "tvg": tvg, "src": src["id"]}
+                merged[key] = cand
                 kept += 1
-            elif src["weight"] > prev["weight"]:
-                prev["info"] = info
-                prev["url"] = url
-                prev["weight"] = src["weight"]
-                prev["src"] = src["id"]
-            # same channel from a lower-weight source: remember it as a fallback
-            merged[key].setdefault("alts", []).append(url)
-        print("source %-12s rows=%-6s kept=%s" % (src["id"], len(rows), kept), flush=True)
+                continue
+            # Same channel seen again: keep the better variant.
+            if cand["variant"] > prev["variant"]:
+                cand["alts"] = prev.get("alts", []) + [prev["url"]]
+                cand["alt_info"] = dict(prev.get("alt_info", {}))
+                cand["alt_info"][prev["url"]] = prev["info"]
+                merged[key] = cand
+            else:
+                prev.setdefault("alts", []).append(url)
+                prev.setdefault("alt_info", {})[url] = info
+        extra = " dropped_non_us=%s" % dropped_country if dropped_country else ""
+        print("source %-12s rows=%-6s kept=%s%s"
+              % (src["id"], len(rows), kept, extra), flush=True)
 
     print("merged unique channels:", len(merged), flush=True)
 
@@ -393,6 +491,34 @@ def main():
             if done % 50 == 0:
                 print("  ffprobe %s/%s live=%s" % (done, len(survivors), live),
                       flush=True)
+
+    # ---- failover: a channel whose primary variant died may still have a
+    # live alternate URL from another source. Probe those before giving up.
+    dead = [(k, r) for k, r in merged.items()
+            if not (probed.get(url_hash(r["url"])) or {}).get("ok")]
+    alts = [(k, r, a) for k, r in dead for a in (r.get("alts") or [])]
+    if alts:
+        print("failover: %s dead primaries, %s alternate URLs to try"
+              % (len(dead), len(alts)), flush=True)
+        with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+            futs = {pool.submit(probe, a): (k, r, a) for k, r, a in alts}
+            for fut in as_completed(futs):
+                k, r, a = futs[fut]
+                probed[url_hash(a)] = {"ok": fut.result(), "ts": now}
+        recovered = 0
+        for k, r in dead:
+            for a in (r.get("alts") or []):
+                if (probed.get(url_hash(a)) or {}).get("ok"):
+                    r["url"] = a
+                    # keep the alternate's own EXTINF so the tvg-id, logo and
+                    # group stay consistent with the URL we are publishing
+                    alt_info = r.get("alt_info", {}).get(a)
+                    if alt_info:
+                        r["info"] = alt_info
+                    recovered += 1
+                    break
+        print("failover recovered %s channels" % recovered, flush=True)
+
     # ---- assemble
     rows = []
     for key, rec in merged.items():

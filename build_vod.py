@@ -15,6 +15,7 @@ Output: vod.m3u, a plain M3U whose entries are on-demand MP4s. Group titles
 separate Films from Series so the player can sort them.
 """
 
+import hashlib
 import json
 import os
 import re
@@ -22,6 +23,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "vod.m3u")
@@ -58,6 +60,22 @@ def metadata(identifier):
     except Exception:
         return None
     return data
+
+
+def metadata_many(identifiers, workers=12):
+    """Fetch item metadata concurrently. The archive.org metadata API is
+    I/O-bound and slow one-at-a-time (~0.4s each); 400 items serially is
+    over two minutes. Threads cut that to seconds."""
+    out = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futs = {pool.submit(metadata, i): i for i in identifiers}
+        for fut in as_completed(futs):
+            ident = futs[fut]
+            try:
+                out[ident] = fut.result()
+            except Exception:
+                out[ident] = None
+    return out
 
 
 def pick_video(files):
@@ -102,6 +120,18 @@ def slug(title):
     return s or "Untitled"
 
 
+def vod_id(identifier):
+    """Stable, collision-free tvg-id for a VOD item.
+
+    A truncated slug is NOT enough: distinct Archive.org identifiers can share
+    a 40-character prefix ("..._s2xe1" vs "..._s2xe2"), which produced duplicate
+    tvg-ids in the published playlist. Append a short hash of the full id.
+    """
+    base = re.sub(r"[^A-Za-z0-9]+", "_", identifier).strip("_")[:28]
+    digest = hashlib.sha1(identifier.encode("utf-8")).hexdigest()[:8]
+    return "%s_%s" % (base, digest)
+
+
 def main():
     state = {}
     if os.path.isfile(STATE):
@@ -121,16 +151,18 @@ def main():
     for group, query in queries:
         docs, total = search(query, rows=MAX_ITEMS)
         stats[group] = {"candidates": len(docs), "total_available": total}
+        pending = []
         for doc in docs:
             ident = doc.get("identifier")
             if not ident or ident in seen:
                 continue
             seen.add(ident)
-            meta = metadata(ident)
+            pending.append((ident, doc))
+        metas = metadata_many([i for i, _ in pending])
+        for ident, doc in pending:
+            meta = metas.get(ident)
             if not meta:
                 continue
-            server = meta.get("server")
-            d1 = meta.get("dir")
             files = meta.get("files") or []
             pick = pick_video(files)
             if not pick:
@@ -144,12 +176,11 @@ def main():
             dur = int(pick["length"]) if pick["length"] else -1
             entries.append({
                 "info": '#EXTINF:-1 tvg-id="vod.%s" group-title="%s",%s'
-                        % (re.sub(r"[^A-Za-z0-9]+", "_", ident)[:40], group, label),
+                        % (vod_id(ident), group, label),
                 "url": url,
                 "group": group,
                 "duration": dur,
             })
-            time.sleep(0.12)
         stats[group]["collected"] = sum(1 for e in entries if e["group"] == group)
 
     # ---- verify a sample actually plays, then write
