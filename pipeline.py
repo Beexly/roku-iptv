@@ -37,7 +37,11 @@ WORKERS = int(os.environ.get("IPTV_WORKERS", "8"))
 PROBE_TIMEOUT = int(os.environ.get("IPTV_PROBE_TIMEOUT", "12"))
 PRECHECK_TIMEOUT = float(os.environ.get("IPTV_PRECHECK_TIMEOUT", "6"))
 MIN_PUBLISH = 400          # hard floor, never publish below this
-CACHE_TTL_DAYS = 5         # re-probe a healthy channel after this long
+# How long a probe result stays trusted. A daily rebuild must re-check
+# yesterday's "live" verdict within a day, otherwise channels that died
+# yesterday stay in the playlist for the whole TTL and the list rots.
+CACHE_TTL_DAYS = float(os.environ.get("IPTV_CACHE_TTL_DAYS", "1"))
+CACHE_RETRY_DAYS = float(os.environ.get("IPTV_CACHE_RETRY_DAYS", "1"))
 CACHE_MAX_DAYS = 21        # forget a channel entirely after this long
 
 
@@ -345,7 +349,7 @@ def main():
         entry = probed.get(h)
         if entry and entry.get("ok") and (now - entry.get("ts", 0)) < CACHE_TTL_DAYS * 86400:
             continue
-        if entry and not entry.get("ok") and (now - entry.get("ts", 0)) < 2 * 86400:
+        if entry and not entry.get("ok") and (now - entry.get("ts", 0)) < CACHE_RETRY_DAYS * 86400:
             continue          # recently failed, don't hammer it
         to_probe.append((key, rec, h))
 
