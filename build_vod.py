@@ -42,10 +42,18 @@ MIN_SIZE_MB = 20
 MIN_SECONDS = 600           # skip shorts/clips
 
 
-def get(url, timeout=30):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return resp.read()
+def get(url, timeout=30, retries=3):
+    last_exc = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read()
+        except Exception as exc:
+            last_exc = exc
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt)
+    raise last_exc
 
 
 def search(query, rows, page=1):
