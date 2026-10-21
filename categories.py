@@ -221,10 +221,15 @@ _NOISE = re.compile(
     re.IGNORECASE,
 )
 
+# The published list is US-only, so "ACTV (United States)" is redundant noise.
+_COUNTRY_SUFFIX = re.compile(
+    r"\s*\((?:United States|USA|US)\)\s*$", re.IGNORECASE)
+
 
 def clean_name(name):
     """Strip resolution tags and provenance brackets from a display name."""
     out = _NOISE.sub("", name or "")
+    out = _COUNTRY_SUFFIX.sub("", out)
     out = re.sub(r"\s{2,}", " ", out).strip(" -\u2013|")
     return out or (name or "").strip()
 

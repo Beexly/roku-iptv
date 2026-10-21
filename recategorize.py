@@ -9,11 +9,19 @@ Usage:
 """
 
 import os
+import re
 import sys
 
 import categories as cats
 
 EXTINF = "#EXTINF"
+_GROUP = re.compile(r'group-title="([^"]*)"')
+
+
+def group_of(info):
+    """Return the group-title attribute of an EXTINF line."""
+    match = _GROUP.search(info)
+    return match.group(1) if match else ""
 
 
 def split_entries(lines):
@@ -42,15 +50,22 @@ def rewrite(path):
     else:
         header, body = "#EXTM3U", lines
 
-    out = [header]
+    entries = []
     changed = 0
-    total = 0
     for info, trailing in split_entries(body):
         new_info = cats.rewrite(info)
-        total += 1
         if new_info != info:
             changed += 1
-        out.append(new_info)
+        entries.append((new_info, trailing))
+    total = len(entries)
+
+    # The app lists categories in first-seen order, so the file order IS the
+    # menu order. Sort by the canonical rank, then by name within a category.
+    entries.sort(key=lambda e: (cats.rank(group_of(e[0])), e[0].lower()))
+
+    out = [header]
+    for info, trailing in entries:
+        out.append(info)
         out.extend(trailing)
     text = "\n".join(line for line in out if line is not None)
     text = text.rstrip("\n") + "\n"
