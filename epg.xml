@@ -176,6 +176,10 @@
 <display-name lang="US">ESPNU HD</display-name>
 <icon src="" />
   </channel>
+  <channel id="Tastemade.us@US">
+<display-name lang="US">Tastemade</display-name>
+<icon src="" />
+  </channel>
   <channel id="RetroTV.us@East">
 <display-name lang="US">RETRO</display-name>
 <icon src="" />
@@ -212,8 +216,20 @@
 <display-name lang="US">Fun Roads</display-name>
 <icon src="" />
   </channel>
+  <channel id="CourtTV.us@SD">
+<display-name lang="US">Court TV</display-name>
+<icon src="" />
+  </channel>
+  <channel id="RacerNetwork.us@SD">
+<display-name lang="US">RACER Network HD</display-name>
+<icon src="" />
+  </channel>
   <channel id="VICETV.us@SD">
 <display-name lang="US">Vice HD</display-name>
+<icon src="" />
+  </channel>
+  <channel id="TennisChannel.us@SD">
+<display-name lang="US">Tennis Channel HD</display-name>
 <icon src="" />
   </channel>
   <channel id="MLB.us@SD">
@@ -252,6 +268,10 @@
 <display-name lang="US">Bloomberg HD</display-name>
 <icon src="" />
   </channel>
+  <channel id="ShopLC.us@SD">
+<display-name lang="US">Shop LC</display-name>
+<icon src="" />
+  </channel>
   <channel id="NHLNetwork.us@SD">
 <display-name lang="US">NHL Network HD</display-name>
 <icon src="" />
@@ -280,7 +300,7 @@
 <display-name lang="US">TCT</display-name>
 <icon src="" />
   </channel>
-  <channel id="OutdoorChannel.us@HD">
+  <channel id="OutdoorChannel.us@SD">
 <display-name lang="US">Outdoor Channel HD</display-name>
 <icon src="" />
   </channel>
@@ -340,12 +360,20 @@
 <display-name lang="US">Vevo True School Hip-Hop</display-name>
 <icon src="" />
   </channel>
-  <channel id="News12PlusNewJersey.us@HD">
+  <channel id="SalemNewsChannel.us@SD">
+<display-name lang="US">Salem News Channel</display-name>
+<icon src="" />
+  </channel>
+  <channel id="News12NewJersey.us@SD">
 <display-name lang="US">News 12 New Jersey</display-name>
 <icon src="" />
   </channel>
   <channel id="FoxSoul.us@SD">
 <display-name lang="US">FOX SOUL</display-name>
+<icon src="" />
+  </channel>
+  <channel id="MagellanTVNow.us@SD">
+<display-name lang="US">MagellanTV Now</display-name>
 <icon src="" />
   </channel>
   <channel id="RevnTV.us">
@@ -354,10 +382,6 @@
   </channel>
   <channel id="AWEPlus.us@SD">
 <display-name lang="US">AWE Plus</display-name>
-<icon src="" />
-  </channel>
-  <channel id="FoxSports.ar@SD">
-<display-name lang="US">Fox Sports 4K</display-name>
 <icon src="" />
   </channel>
   <channel id="ACCDigitalNetwork.us@SD">
@@ -12412,6 +12436,374 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
+<programme channel="Tastemade.us@US" start="20261021000000 +0000" stop="20261021010000 +0000">
+<title lang="zh">Gordon Ramsay's Ultimate Cooking Course</title>
+<desc>Gordon teaches us how to cook for special occasions, including stuffed lamb with spinach and pine nuts, Vietnamese-style fresh prawn rolls and a sumptuous whole sea bass stuffed with fennel, lemon and capers.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021010000 +0000" stop="20261021020000 +0000">
+<title lang="zh">Gordon Ramsay's Ultimate Cooking Course</title>
+<desc>Gordon turns his focus to home baking. Recipes include his flavor-packed olive, tomato and rosemary focaccia, quick flatbreads with lemon, thyme and ricotta and a spectacular sponge with fresh ginger.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021020000 +0000" stop="20261021030000 +0000">
+<title lang="zh">Gordon Ramsay's Ultimate Cooking Course</title>
+<desc>Gordon's tackles stress-free cooking with recipes including sticky pork ribs, meatballs four ways and an amazing chilli chicken with ginger and coriander that just gets better and better with time.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021030000 +0000" stop="20261021040000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie skips the stress and roasts a juicy spatchcocked turkey, then goes big on sides-cardamom rolls, Sweet &amp; Savory Dauphinoise Potatoes, Brussels Sprouts with Bacon Jam, and a bright Citrus Salad with smoked salt.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021040000 +0000" stop="20261021050000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie makes pizza magic with two incredible doughs, turning his kitchen into a pizza party with grilled sausage pizza, cheesy Grandma Pies, golden Panzerotti, and a sweet dessert pizza topped with ricotta, berries, and honey.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021050000 +0000" stop="20261021060000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie explores his Italian roots, pairing each pasta shape with its perfect sauce-from Cavatelli with Super Green Sauce to Pappardelle in pork ragout, ricotta Gnocchi with punchy anchovy pecorino, and cozy Squash Orzotto with bloomed poppy seeds.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021060000 +0000" stop="20261021070000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie flips the script for his wife Heather making breakfast for dinner featuring Banana Maple Pancakes, Eggs Benedict with prosciutto cotto, Home Fries with Bloody Mary Ketchup, Sausage Scrapple, and a boozy Espresso Milkshake.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021070000 +0000" stop="20261021080000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie reimagines the Feast of the Seven Fishes with a shellfish-free spread making Smoked Whitefish Salad, Anchovy Butter Toast, Salt-baked Red Snapper, Trout Scapece, and Pasta con le Sarde, with a helping hand from his mom.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021080000 +0000" stop="20261021090000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie fuels up for action making hot Oatmeal, and Energy Date Balls, before he cooks up the perfect post-ride feast of cheesy Juicy Lucy Burgers, Ramp-loaded pasta salad, and a maple ginger switchel to cool it all down.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021090000 +0000" stop="20261021093000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Frankie shows us easy and inventive no-kitchen hacks for delicious struggle meals. No Kitchen? No problem.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021093000 +0000" stop="20261021100000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Reaching textural nirvana is never easy, but Frankie explores several ways to achieve the perfect crunch in his dishes, both savory and sweet. Add this elusive element to your recipes without adding cost to your budget.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021100000 +0000" stop="20261021103000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>You say hot dishes, Frankie says casserole. Either way, these one-pot hot dishes are an affordable way to feed a group of people, or the family for dinner. Plus they're great to freeze for future meals.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021103000 +0000" stop="20261021110000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>It's dinnertime and breakfast is on the menu this week. These affordable breakfast specials are hearty enough for dinner, and so delicious they may even taste better after dark. Grab a fork and dig in for the most important meal of the day!</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021110000 +0000" stop="20261021113000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Frankie figured out the weekly budget grocery equation so you don't have to. Breakfast, lunch, and dinner for seven days, for a family of four, for under $150. All it takes is a little planning, meal prep, and using up leftovers in inventive ways.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021113000 +0000" stop="20261021120000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Spring is in the air which means a whole new world opens up in the produce department, especially all the greens. Frankie teaches us how to cook with mother nature, spring-style. It's tasty, seasonably affordable, and pretty to look at.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021120000 +0000" stop="20261021130000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie flips the script for his wife Heather making breakfast for dinner featuring Banana Maple Pancakes, Eggs Benedict with prosciutto cotto, Home Fries with Bloody Mary Ketchup, Sausage Scrapple, and a boozy Espresso Milkshake.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021130000 +0000" stop="20261021140000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie reimagines the Feast of the Seven Fishes with a shellfish-free spread making Smoked Whitefish Salad, Anchovy Butter Toast, Salt-baked Red Snapper, Trout Scapece, and Pasta con le Sarde, with a helping hand from his mom.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021140000 +0000" stop="20261021150000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie fuels up for action making hot Oatmeal, and Energy Date Balls, before he cooks up the perfect post-ride feast of cheesy Juicy Lucy Burgers, Ramp-loaded pasta salad, and a maple ginger switchel to cool it all down.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021150000 +0000" stop="20261021153000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Frankie shows us easy and inventive no-kitchen hacks for delicious struggle meals. No Kitchen? No problem.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021153000 +0000" stop="20261021160000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Reaching textural nirvana is never easy, but Frankie explores several ways to achieve the perfect crunch in his dishes, both savory and sweet. Add this elusive element to your recipes without adding cost to your budget.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021160000 +0000" stop="20261021163000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>You say hot dishes, Frankie says casserole. Either way, these one-pot hot dishes are an affordable way to feed a group of people, or the family for dinner. Plus they're great to freeze for future meals.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021163000 +0000" stop="20261021170000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>It's dinnertime and breakfast is on the menu this week. These affordable breakfast specials are hearty enough for dinner, and so delicious they may even taste better after dark. Grab a fork and dig in for the most important meal of the day!</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021170000 +0000" stop="20261021173000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Frankie figured out the weekly budget grocery equation so you don't have to. Breakfast, lunch, and dinner for seven days, for a family of four, for under $150. All it takes is a little planning, meal prep, and using up leftovers in inventive ways.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021173000 +0000" stop="20261021180000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Spring is in the air which means a whole new world opens up in the produce department, especially all the greens. Frankie teaches us how to cook with mother nature, spring-style. It's tasty, seasonably affordable, and pretty to look at.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021180000 +0000" stop="20261021190000 +0000">
+<title lang="zh">Gordon Ramsay's Ultimate Cooking Course</title>
+<desc>Gordon teaches us how to cook for special occasions, including stuffed lamb with spinach and pine nuts, Vietnamese-style fresh prawn rolls and a sumptuous whole sea bass stuffed with fennel, lemon and capers.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021190000 +0000" stop="20261021200000 +0000">
+<title lang="zh">Gordon Ramsay's Ultimate Cooking Course</title>
+<desc>Gordon turns his focus to home baking. Recipes include his flavor-packed olive, tomato and rosemary focaccia, quick flatbreads with lemon, thyme and ricotta and a spectacular sponge with fresh ginger.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021200000 +0000" stop="20261021210000 +0000">
+<title lang="zh">Gordon Ramsay's Ultimate Cooking Course</title>
+<desc>Gordon's tackles stress-free cooking with recipes including sticky pork ribs, meatballs four ways and an amazing chilli chicken with ginger and coriander that just gets better and better with time.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021210000 +0000" stop="20261021220000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie skips the stress and roasts a juicy spatchcocked turkey, then goes big on sides-cardamom rolls, Sweet &amp; Savory Dauphinoise Potatoes, Brussels Sprouts with Bacon Jam, and a bright Citrus Salad with smoked salt.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021220000 +0000" stop="20261021230000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie makes pizza magic with two incredible doughs, turning his kitchen into a pizza party with grilled sausage pizza, cheesy Grandma Pies, golden Panzerotti, and a sweet dessert pizza topped with ricotta, berries, and honey.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261021230000 +0000" stop="20261022000000 +0000">
+<title lang="zh">Let Frankie Cook</title>
+<desc>Frankie explores his Italian roots, pairing each pasta shape with its perfect sauce-from Cavatelli with Super Green Sauce to Pappardelle in pork ragout, ricotta Gnocchi with punchy anchovy pecorino, and cozy Squash Orzotto with bloomed poppy seeds.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022000000 +0000" stop="20261022003000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Frankie's got tricks and treats up his sleeve this Halloween with simple, wicked good dishes for all to enjoy.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022003000 +0000" stop="20261022010000 +0000">
+<title lang="zh">Struggle Meals</title>
+<desc>Trick or treat! These affordable, spooky Halloween-spirited dishes are hard to beat!</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022010000 +0000" stop="20261022013000 +0000">
+<title lang="zh">Baking the Holidays</title>
+<desc>Join Mia — these Halloween cakes are sure to SCARE! Blood-red velvet cake, marshmallow spiderwebs, bubbling cauldrons and a cake that bites back will inspire some serious spooky vibes. Mia will seriously impress and teach you new skills.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022013000 +0000" stop="20261022020000 +0000">
+<title lang="zh">Baking the Holidays</title>
+<desc>Whether you have kids or are a kid at heart, these whimsical Halloween treats are delicious, easy bakes. From leftover Halloween candy bark to ghostly treats and monster cakes. These recipes are perfect to make with little ones.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022020000 +0000" stop="20261022023000 +0000">
+<title lang="zh">Baking the Holidays</title>
+<desc>Make your Halloween Party the talk of every boy and ghoul in the neighborhood! Whether it's the poisoned apples, the drippy candle cakes, coffin pies or savory treats (or tricks) - these delicious bakes will surely delight and scare.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022023000 +0000" stop="20261022030000 +0000">
+<title lang="zh">Halloween Candy Lovers Will Hate This Ranking</title>
+<desc>On this episode of Forking Delicious, it's Halloween, and you can't have tricks without the treats! It's a sugary smackdown as our panel of treat-loving tricksters count down your top 10 Halloween candies of all time!</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022030000 +0000" stop="20261022040000 +0000">
+<title lang="zh">Jamie Oliver: Seasons</title>
+<desc>Jamie throws the most festive Christmas Party! The menu includes cheesy filo parcels, a make-ahead Christmas cauliflower lasagne, and jerk-rubbed hasselback root veg with chicken kebabs. He finishes with a fudgy sticky toffee coffee pudding.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022040000 +0000" stop="20261022050000 +0000">
+<title lang="zh">Jamie Oliver: Seasons</title>
+<desc>Jamie welcomes his family to his outdoor shed for Christmas dinner! He swaps turkey for a show-stopping festive porchetta, served with crispy roast potatoes. The menu also includes a veggie Brussels sprouts pie and a mulled wine pear pavlova.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022050000 +0000" stop="20261022060000 +0000">
+<title lang="zh">Jamie Oliver: Seasons</title>
+<desc>Jamie wraps up autumn with cheesy squash tagliatelle, a mushroom curry with crispy ginger rice, and celeriac rémoulade. He forages for blackberries to make a cobbler, the perfect end to a crisp autumn day.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022060000 +0000" stop="20261022070000 +0000">
+<title lang="zh">Jamie Oliver's Feasts for Less</title>
+<desc>From crispy, herby Caprese chicken burgers to golden spinach pies, creamy pork &amp; fennel ragù with fresh pappardelle, and a comforting tinned peach cobbler with fruit-rippled cream, Jamie proves budget-friendly cooking can be utterly delicious.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022070000 +0000" stop="20261022080000 +0000">
+<title lang="zh">Jamie Oliver's Feasts for Less</title>
+<desc>With inspiration to make everyday ingredients into feasts for less, Jamie shares his version of beef &amp; potato pasties, a homemade gnocchi using leftover cheese, fish cakes made from the store cupboard and a retro dessert brought bang up to date.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022080000 +0000" stop="20261022090000 +0000">
+<title lang="zh">Jamie Oliver's Feasts for Less</title>
+<desc>Jamie makes an epic toad in the hole with onion gravy, silky aubergine noodles with peanuts and mint, a comforting and thrifty chicken, sausage &amp; white bean bake with cabbage cake, and a nostalgic jam treacle tart with old-school custard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022090000 +0000" stop="20261022100000 +0000">
+<title lang="zh">Jamie Oliver's Feasts for Less</title>
+<desc>Jamie wraps up the series with a gnarly celeriac skewer &amp; flatbread feast, a hearty spiced cauliflower bake complete with edible lid, a steaming winter chilli that's good for your health and for your wallet and two delicious ways to elevate lunch.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022100000 +0000" stop="20261022110000 +0000">
+<title lang="zh">Jamie Oliver's Feasts for Less</title>
+<desc>From a cosy chicken hotpot with braised cabbage to cheesy French-toast crumpets with smashed peas and bacon, a quick, aromatic fish curry, and a golden pear &amp; almond cake with orange drizzle, Jamie proves simple ingredients really can shine.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022110000 +0000" stop="20261022120000 +0000">
+<title lang="zh">Jamie Oliver's Feasts for Less</title>
+<desc>Jamie's Thai red chicken &amp; squash traybake uses clever tips to get more for your money, a sardine puttanesca proves budget doesn't mean basic, a bagel recipe creates a low-cost lunch and his cherry chocolate mousse is a little bit of low-cost luxury.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="Tastemade.us@US" start="20261022120000 +0000" stop="20261023000000 +0000">
+<title lang="zh">Jamie Oliver's Feasts for Less</title>
+<desc>From crispy, herby Caprese chicken burgers to golden spinach pies, creamy pork &amp; fennel ragù with fresh pappardelle, and a comforting tinned peach cobbler with fruit-rippled cream, Jamie proves budget-friendly cooking can be utterly delicious.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
 <programme channel="FreeSpeechTV.us@SD" start="20261021000000 +0000" stop="20261021030000 +0000">
 <title lang="zh">The Thom Hartmann Program</title>
 <desc>Deft coverage of diverse topics and issues of the day from Thom Hartmann, top-rated progressive talk show host, political commentator, and best-selling author.</desc>
@@ -15756,6 +16148,790 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
+<programme channel="CourtTV.us@SD" start="20261021000000 +0000" stop="20261021010000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021010000 +0000" stop="20261021020000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021020000 +0000" stop="20261021030000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021030000 +0000" stop="20261021040000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021040000 +0000" stop="20261021050000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021050000 +0000" stop="20261021060000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021060000 +0000" stop="20261021070000 +0000">
+<title lang="zh">48 Hours</title>
+<desc>When an elderly millionaire is found dead in a freezer, her decades-younger companion is brought up on murder charges; the movie inspired by the story, "Bernie.".</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021070000 +0000" stop="20261021080000 +0000">
+<title lang="zh">VPI: Vinnie Politan Investigates</title>
+<desc>Lindsay Clancy's ex-mother-in-law testified on her behalf as the defense continued presenting evidence in the case involving the deaths of Lindsay's three children.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021080000 +0000" stop="20261021090000 +0000">
+<title lang="zh">VPI: Vinnie Politan Investigates</title>
+<desc>Lindsay Clancy's ex-mother-in-law testified on her behalf as the defense continued presenting evidence in the case involving the deaths of Lindsay's three children.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021090000 +0000" stop="20261021100000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>In 2013, the small city of Weatherford, Texas was rocked by the brutal slaying of local son, JD Doss. The murder weapon? A pickaxe. The murderer? His close friend, 24-year-old Nicholas Camfield. In a shocking twist, Camfield not only killed his victim by repeatedly striking him in the head, he also mutilated, scalped, and defiled his body over the course of days. In one of David Scott's most shock</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021100000 +0000" stop="20261021110000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>She's one of the most camera-friendly killers in true crime history. A glamorous Texas social climber turned convicted black widow. Celeste Beard Johnson has done many television interviews, flashing a smile as she proclaims her innocence and pleads for sympathy. But she's never been questioned by David Scott. And this interview is unlike any that she's ever done. In this special episode of Interv</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021110000 +0000" stop="20261021120000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>A gruesome video on a stolen SD card exposes Brian Steven Smith's secret double life; David Scott confronts this soft-spoken husband and serial killer about his nighttime hunts for vulnerable Alaskan women.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021120000 +0000" stop="20261021130000 +0000">
+<title lang="zh">VPI: Vinnie Politan Investigates</title>
+<desc>Lindsay Clancy's ex-mother-in-law testified on her behalf as the defense continued presenting evidence in the case involving the deaths of Lindsay's three children.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021130000 +0000" stop="20261021140000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>In 2013, the small city of Weatherford, Texas was rocked by the brutal slaying of local son, JD Doss. The murder weapon? A pickaxe. The murderer? His close friend, 24-year-old Nicholas Camfield. In a shocking twist, Camfield not only killed his victim by repeatedly striking him in the head, he also mutilated, scalped, and defiled his body over the course of days. In one of David Scott's most shock</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021140000 +0000" stop="20261021150000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>She's one of the most camera-friendly killers in true crime history. A glamorous Texas social climber turned convicted black widow. Celeste Beard Johnson has done many television interviews, flashing a smile as she proclaims her innocence and pleads for sympathy. But she's never been questioned by David Scott. And this interview is unlike any that she's ever done. In this special episode of Interv</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021150000 +0000" stop="20261021160000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>A gruesome video on a stolen SD card exposes Brian Steven Smith's secret double life; David Scott confronts this soft-spoken husband and serial killer about his nighttime hunts for vulnerable Alaskan women.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021160000 +0000" stop="20261021170000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>Yaser Said breaks his silence about the night he fatally shot his teenage daughters near Dallas, Texas, the events leading up to the tragedy, and how he managed to evade capture for over a decade.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021170000 +0000" stop="20261021180000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>Denali Brehmer agrees to kill her best friend for a man she met online offering millions for murder, but an interview with Brehmer reveals she's far from a naive teen led astray by an outside influence.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021180000 +0000" stop="20261021190000 +0000">
+<title lang="zh">Interview With a Killer</title>
+<desc>Bo Pete Jeffrey claims no memory of the crime he's convicted for, the brutal beating and murder of his wife; four years into his life sentence, Jeffrey tells a different story that opens a new window into the mind of this convicted murderer.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021190000 +0000" stop="20261021200000 +0000">
+<title lang="zh">Accomplice to Murder, With Vinnie Politan</title>
+<desc>Toby Lowry and his 15-year-old girlfriend Morgan Leppert murder an elderly disabled man.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021200000 +0000" stop="20261021210000 +0000">
+<title lang="zh">VPI: Vinnie Politan Investigates</title>
+<desc>Lindsay Clancy's ex-mother-in-law testified on her behalf as the defense continued presenting evidence in the case involving the deaths of Lindsay's three children.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021210000 +0000" stop="20261021220000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021220000 +0000" stop="20261021230000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261021230000 +0000" stop="20261022000000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022000000 +0000" stop="20261022010000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022010000 +0000" stop="20261022020000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022020000 +0000" stop="20261022030000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022030000 +0000" stop="20261022040000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022040000 +0000" stop="20261022050000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022050000 +0000" stop="20261022060000 +0000">
+<title lang="zh">Court TV Live</title>
+<desc>Gavel-to-gavel coverage and legal analysis of the nation's most compelling trials.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022060000 +0000" stop="20261022070000 +0000">
+<title lang="zh">48 Hours</title>
+<desc>A football coach serves nine years in prison for the murder of his wife before a Texas Court of Criminal Appeals finds he didn't get a fair trial.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022070000 +0000" stop="20261022080000 +0000">
+<title lang="zh">VPI: Vinnie Politan Investigates</title>
+<desc>Lindsay Clancy's ex-mother-in-law testified on her behalf as the defense continued presenting evidence in the case involving the deaths of Lindsay's three children.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022080000 +0000" stop="20261022090000 +0000">
+<title lang="zh">VPI: Vinnie Politan Investigates</title>
+<desc>Lindsay Clancy's ex-mother-in-law testified on her behalf as the defense continued presenting evidence in the case involving the deaths of Lindsay's three children.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022090000 +0000" stop="20261022100000 +0000">
+<title lang="zh">Prime Crime</title>
+<desc>When a beloved farmer is killed in his own home, it takes three years to make an arrest.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022100000 +0000" stop="20261022110000 +0000">
+<title lang="zh">Prime Crime</title>
+<desc>The murder of a celebrity hair stylist leads detectives to a shocking betrayal close to home.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022110000 +0000" stop="20261022120000 +0000">
+<title lang="zh">Prime Crime</title>
+<desc>When a boy goes missing, police launch a massive search for him, and a manhunt for his parents.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="CourtTV.us@SD" start="20261022120000 +0000" stop="20261023000000 +0000">
+<title lang="zh">VPI: Vinnie Politan Investigates</title>
+<desc>Lindsay Clancy's ex-mother-in-law testified on her behalf as the defense continued presenting evidence in the case involving the deaths of Lindsay's three children.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021000000 +0000" stop="20261021010000 +0000">
+<title lang="zh">2026 Mazda MX-5 Cup</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021010000 +0000" stop="20261021020000 +0000">
+<title lang="zh">2026 Lamborghini Super Trofeo</title>
+<desc>Lamborghini Super Trofeo North America heads west to Monterey and WeatherTech Raceway Laguna Seca's Corkscrew, where last year a thrilling photo finish occurred.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021020000 +0000" stop="20261021021500 +0000">
+<title lang="zh">Petrolicious -- Homologated Series</title>
+<desc>Spotlights iconic, performance-driven machines that push production rules to achieve racing success.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021021500 +0000" stop="20261021023000 +0000">
+<title lang="zh">Petrolicious -- Homologated Series</title>
+<desc>Spotlights iconic, performance-driven machines that push production rules to achieve racing success.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021023000 +0000" stop="20261021030000 +0000">
+<title lang="zh">Southbound - Central America</title>
+<desc>The toughest border yet forces an impossible decision that forces the group to part ways, until a solution is found.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021030000 +0000" stop="20261021040000 +0000">
+<title lang="zh">2026 Mazda MX-5 Cup</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021040000 +0000" stop="20261021050000 +0000">
+<title lang="zh">2026 Lamborghini Super Trofeo</title>
+<desc>Lamborghini Super Trofeo North America heads west to Monterey and WeatherTech Raceway Laguna Seca's Corkscrew, where last year a thrilling photo finish occurred.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021050000 +0000" stop="20261021051500 +0000">
+<title lang="zh">The Greatest</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021051500 +0000" stop="20261021053000 +0000">
+<title lang="zh">The Greatest</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021053000 +0000" stop="20261021060000 +0000">
+<title lang="zh">2026 FIM Supermoto Highlights</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021060000 +0000" stop="20261021070000 +0000">
+<title lang="zh">2026 British Superbikes</title>
+<desc>Since 1988, this series has evolved into one of the world's premier domestic superbike series, with its claim to fame being international stars such as Troy Bayliss, Alex Lowes and Neil Hodgson.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021070000 +0000" stop="20261021080000 +0000">
+<title lang="zh">2026 King of the Roads</title>
+<desc>With riders racing through city streets on 200mph motorcycles with no margin for error, this series is the ultimate test for adrenaline junkies who are looking for the biggest thrill in motorsports.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021080000 +0000" stop="20261021090000 +0000">
+<title lang="zh">2026 FIM World Superbike Championship Highlights</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021090000 +0000" stop="20261021093000 +0000">
+<title lang="zh">2026 AMA U.S. Hard Enduro Series</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021093000 +0000" stop="20261021100000 +0000">
+<title lang="zh">2026 FIM MXGP -- Behind the Gate</title>
+<desc>Exclusive, behind-the-scenes access to the 2026 Motocross World Championship, featuring highlights, interviews and deep dives into the 19-round season.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021100000 +0000" stop="20261021103000 +0000">
+<title lang="zh">Southbound - Central America</title>
+<desc>The toughest border yet forces an impossible decision that forces the group to part ways, until a solution is found.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021103000 +0000" stop="20261021110000 +0000">
+<title lang="zh">Southbound - Central America</title>
+<desc>After a lengthy and difficult separation, the 3 reunite in Costa Rica and make haste to their destination in Panama.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021110000 +0000" stop="20261021120000 +0000">
+<title lang="zh">2026 FIM World Superbike Championship Highlights</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021120000 +0000" stop="20261021123000 +0000">
+<title lang="zh">2026 AMA U.S. Hard Enduro Series</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021123000 +0000" stop="20261021130000 +0000">
+<title lang="zh">2026 FIM MXGP -- Behind the Gate</title>
+<desc>Exclusive, behind-the-scenes access to the 2026 Motocross World Championship, featuring highlights, interviews and deep dives into the 19-round season.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021130000 +0000" stop="20261021133000 +0000">
+<title lang="zh">Southbound - Central America</title>
+<desc>The toughest border yet forces an impossible decision that forces the group to part ways, until a solution is found.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021133000 +0000" stop="20261021140000 +0000">
+<title lang="zh">Southbound - Central America</title>
+<desc>After a lengthy and difficult separation, the 3 reunite in Costa Rica and make haste to their destination in Panama.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021140000 +0000" stop="20261021141500 +0000">
+<title lang="zh">The Greatest</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021141500 +0000" stop="20261021143000 +0000">
+<title lang="zh">The Greatest</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021143000 +0000" stop="20261021150000 +0000">
+<title lang="zh">2026 FIM Supermoto Highlights</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021150000 +0000" stop="20261021160000 +0000">
+<title lang="zh">2026 British Superbikes</title>
+<desc>Since 1988, this series has evolved into one of the world's premier domestic superbike series, with its claim to fame being international stars such as Troy Bayliss, Alex Lowes and Neil Hodgson.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021160000 +0000" stop="20261021170000 +0000">
+<title lang="zh">2026 King of the Roads</title>
+<desc>With riders racing through city streets on 200mph motorcycles with no margin for error, this series is the ultimate test for adrenaline junkies who are looking for the biggest thrill in motorsports.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021170000 +0000" stop="20261021173000 +0000">
+<title lang="zh">Southbound - Central America</title>
+<desc>The toughest border yet forces an impossible decision that forces the group to part ways, until a solution is found.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021173000 +0000" stop="20261021180000 +0000">
+<title lang="zh">Southbound - Central America</title>
+<desc>After a lengthy and difficult separation, the 3 reunite in Costa Rica and make haste to their destination in Panama.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021180000 +0000" stop="20261021183000 +0000">
+<title lang="zh">Men's Health - All-Natural Secret for Prostate Health</title>
+<desc>Prosvent is a doctor-formulated blend of rejuvenating herbs and nutrients that help protect overall prostate health.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021183000 +0000" stop="20261021190000 +0000">
+<title lang="zh">Transform your home today, fast &amp; easy!</title>
+<desc>RotoRazer is the world's greatest jigsaw, circular saw, band saw, tile saw and hacksaw all-in-one amazing easy to use tool!</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021190000 +0000" stop="20261021193000 +0000">
+<title lang="zh">Paid Programming</title>
+<desc>Paid programming.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021193000 +0000" stop="20261021200000 +0000">
+<title lang="zh">Paid Programming</title>
+<desc>Paid programming.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021200000 +0000" stop="20261021203000 +0000">
+<title lang="zh">Paid Programming</title>
+<desc>Paid programming.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021203000 +0000" stop="20261021210000 +0000">
+<title lang="zh">Paid Programming</title>
+<desc>Paid programming.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021210000 +0000" stop="20261021213000 +0000">
+<title lang="zh">Lost Classics</title>
+<desc>Tony teams up with the Auto Archeologist, Ryan Brutt, to uncover one of the rarest Dodge Demons in existence. Then Tony follows the trail to make an offer on a movie-star, an Eleanor Mustang. With this deal, the sky's the limit!</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021213000 +0000" stop="20261021220000 +0000">
+<title lang="zh">My Classic Car</title>
+<desc>Host Dennis Gage upholds his "honor the timeless classics" catchphrase in this series, as he travels across North America to visit prestigious auto shows and events, spotlighting everything from muscle cars to museum pieces. The handlebar mustachioed Gage takes viewers along for the ride and keeps it entertaining with his unique perspective and enthusiasm for all things automotive.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021220000 +0000" stop="20261021223000 +0000">
+<title lang="zh">Stacey David's GearZ</title>
+<desc>Stacey digs into the unique history of how a WWII vehicle became the first mass-produced civilian 4x4 truck; he upgrades the electrical and fuel systems on a '49 Power Wagon, so you can drive it safely.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021223000 +0000" stop="20261021230000 +0000">
+<title lang="zh">Sam's Garage</title>
+<desc>Sam visits Lanier Tech and Boss Hog is back in the studio with a 1993 Toyota Supra.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261021230000 +0000" stop="20261022000000 +0000">
+<title lang="zh">2026 Trans Am Highlights</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022000000 +0000" stop="20261022010000 +0000">
+<title lang="zh">Racers Unchained</title>
+<desc>Tony Kanaan and Paul Tracy discuss their careers in open-wheel racing; Kanaan, an Indianapolis 500 winner and IndyCar champion, serves as the team principal for Arrow McLaren while the two drivers review their experiences in the sport.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022010000 +0000" stop="20261022013000 +0000">
+<title lang="zh">Gridlives</title>
+<desc>The fight to stay on top. 2020 GLTC Champion Eric Kutil throws down at the flagship Midwest Festival at Gingerman Raceway, battling his way toward the podium amidst fierce, door-to-door competition against some of the fastest and best-prepared cars in series history.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022013000 +0000" stop="20261022020000 +0000">
+<title lang="zh">Gridlives</title>
+<desc>When the weekend goes sideways. Following Matan Rosenberg, this episode exposes the brutal, behind-the-scenes realities of a race weekend that takes an unexpected turn. It is a testament to the resilience, thrashing, and pure passion that defines the paddock.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022020000 +0000" stop="20261022030000 +0000">
+<title lang="zh">2026 Trans Am Highlights</title>
+<desc />
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022030000 +0000" stop="20261022040000 +0000">
+<title lang="zh">Racers Unchained</title>
+<desc>Tony Kanaan and Paul Tracy discuss their careers in open-wheel racing; Kanaan, an Indianapolis 500 winner and IndyCar champion, serves as the team principal for Arrow McLaren while the two drivers review their experiences in the sport.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022040000 +0000" stop="20261022043000 +0000">
+<title lang="zh">Gridlives</title>
+<desc>The fight to stay on top. 2020 GLTC Champion Eric Kutil throws down at the flagship Midwest Festival at Gingerman Raceway, battling his way toward the podium amidst fierce, door-to-door competition against some of the fastest and best-prepared cars in series history.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022043000 +0000" stop="20261022050000 +0000">
+<title lang="zh">Gridlives</title>
+<desc>When the weekend goes sideways. Following Matan Rosenberg, this episode exposes the brutal, behind-the-scenes realities of a race weekend that takes an unexpected turn. It is a testament to the resilience, thrashing, and pure passion that defines the paddock.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022050000 +0000" stop="20261022053000 +0000">
+<title lang="zh">Lost Classics</title>
+<desc>Tony helps prep a quirky, rare British TVR for sale and makes a play for one of the most elusive Camaros ever built, the legendary ZL1. When Tony is offered a rust-free '55 Chevy he knows it's too good of a deal to pass up.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022053000 +0000" stop="20261022060000 +0000">
+<title lang="zh">Off-Road Travel TV</title>
+<desc>The team travels to Montana to test a pair of Honda Talon UTVs, then Ken Faught and Randy Commons head to Colorado to ride adventure bikes. We also test Beta's all-new Alp X dual-sport motorcycle.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022060000 +0000" stop="20261022070000 +0000">
+<title lang="zh">2026 Best of GAA Classic Car Auctions</title>
+<desc />
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022070000 +0000" stop="20261022073000 +0000">
+<title lang="zh">Stacey David's GearZ</title>
+<desc>The Stunt Double is back in the shop for its reveal and payoff; inspired by the FALL GUY truck, the Stunt Double is a ground up, frame off build of a square body Chevy truck that pays tribute to the stunt world.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022073000 +0000" stop="20261022080000 +0000">
+<title lang="zh">Sam's Garage</title>
+<desc>Sam's Garage is on location in Greenville, PA for the annual Heritage Days Super Cruise.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022080000 +0000" stop="20261022090000 +0000">
+<title lang="zh">Vicari Auction Show</title>
+<desc>Specializing in muscle, classic and late model exotics, Vicari Auctions has grown to offer over 600 vehicles up for bid with no reserve while generating over $8 million in sales at each event.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022090000 +0000" stop="20261022093000 +0000">
+<title lang="zh">Fix It With Ms. A</title>
+<desc>Ms. A diagnoses a car that won't start, showing how mechanics systematically narrow down problems until they find a solution.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022093000 +0000" stop="20261022100000 +0000">
+<title lang="zh">Sam's Garage</title>
+<desc>Sam's Garage is on location in Greenville, PA for the annual Heritage Days Super Cruise.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022100000 +0000" stop="20261022101500 +0000">
+<title lang="zh">HPA Legends Built to Win</title>
+<desc />
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022101500 +0000" stop="20261022103000 +0000">
+<title lang="zh">HPA Legends Built to Win</title>
+<desc />
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022103000 +0000" stop="20261022110000 +0000">
+<title lang="zh">SEMA Battle of the Builders</title>
+<desc />
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022110000 +0000" stop="20261022120000 +0000">
+<title lang="zh">Vicari Auction Show</title>
+<desc>Specializing in muscle, classic and late model exotics, Vicari Auctions has grown to offer over 600 vehicles up for bid with no reserve while generating over $8 million in sales at each event.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022120000 +0000" stop="20261022123000 +0000">
+<title lang="zh">Stacey David's GearZ</title>
+<desc>The Stunt Double is back in the shop for its reveal and payoff; inspired by the FALL GUY truck, the Stunt Double is a ground up, frame off build of a square body Chevy truck that pays tribute to the stunt world.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="RacerNetwork.us@SD" start="20261022123000 +0000" stop="20261023000000 +0000">
+<title lang="zh">Sam's Garage</title>
+<desc>Sam's Garage is on location in Greenville, PA for the annual Heritage Days Super Cruise.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
 <programme channel="VICETV.us@SD" start="20261021000000 +0000" stop="20261021010000 +0000">
 <title lang="zh">Dark Side of Reality TV</title>
 <desc>Gifting new homes to families in dire straits seems anything but dark; but viewers don't get to see how the houses become money-pits, that lead to family fallout and massive debt.</desc>
@@ -18436,6 +19612,302 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
+<programme channel="ShopLC.us@SD" start="20261021000000 +0000" stop="20261021010000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021010000 +0000" stop="20261021020000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021020000 +0000" stop="20261021030000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021030000 +0000" stop="20261021040000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021040000 +0000" stop="20261021050000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021050000 +0000" stop="20261021060000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021060000 +0000" stop="20261021070000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021070000 +0000" stop="20261021080000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021080000 +0000" stop="20261021090000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021090000 +0000" stop="20261021100000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021100000 +0000" stop="20261021110000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021110000 +0000" stop="20261021120000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021120000 +0000" stop="20261021130000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021130000 +0000" stop="20261021140000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021140000 +0000" stop="20261021150000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021150000 +0000" stop="20261021160000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021160000 +0000" stop="20261021170000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021170000 +0000" stop="20261021180000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021180000 +0000" stop="20261021190000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021190000 +0000" stop="20261021200000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021200000 +0000" stop="20261021210000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021210000 +0000" stop="20261021220000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021220000 +0000" stop="20261021230000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261021230000 +0000" stop="20261022000000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022000000 +0000" stop="20261022010000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022010000 +0000" stop="20261022020000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022020000 +0000" stop="20261022030000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022030000 +0000" stop="20261022040000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022040000 +0000" stop="20261022050000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022050000 +0000" stop="20261022060000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022060000 +0000" stop="20261022070000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022070000 +0000" stop="20261022080000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022080000 +0000" stop="20261022090000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022090000 +0000" stop="20261022100000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022100000 +0000" stop="20261022110000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022110000 +0000" stop="20261022120000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="ShopLC.us@SD" start="20261022120000 +0000" stop="20261023000000 +0000">
+<title lang="zh">Shopping</title>
+<desc>Coasting with Carol at Willow and Mercer; Coasting with Carol at Ophelia Swimwear Grand Boulevard; Coasting with Carol at Ophelia Swimwear Grand Boulevard.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
 <programme channel="NHLNetwork.us@SD" start="20261021000000 +0000" stop="20261021020000 +0000">
 <title lang="zh">NHL Hockey</title>
 <desc>From Delta Center in Salt Lake City.</desc>
@@ -20668,7 +22140,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021000000 +0000" stop="20261021003000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021000000 +0000" stop="20261021003000 +0000">
 <title lang="zh">MeatEater - Rinella's Field Notes</title>
 <desc>Steven Rinella looks back on some of his most unforgettable elk hunts-the highs, the lows, and the lessons learned along the way. From Kentucky to the Rockies and all the way up to Alaska, these stories cover a hell of a lot of ground.</desc>
 <date>20261021</date>
@@ -20676,7 +22148,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021003000 +0000" stop="20261021010000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021003000 +0000" stop="20261021010000 +0000">
 <title lang="zh">MeatEater</title>
 <desc>Steve hunts for squirrels and rabbits with Guy Zuck and Kevin Murphy.</desc>
 <date>20261021</date>
@@ -20684,7 +22156,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021010000 +0000" stop="20261021013000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021010000 +0000" stop="20261021013000 +0000">
 <title lang="zh">The Fowl Life With Chad Belding</title>
 <desc>Just like Dorothy, we click our heels and head back to Kansas to relive some of the best times we've had in the field.</desc>
 <date>20261021</date>
@@ -20692,7 +22164,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021013000 +0000" stop="20261021020000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021013000 +0000" stop="20261021020000 +0000">
 <title lang="zh">The Flush</title>
 <desc>Travis Frank hunts for ruffed grouse &amp; woodcock on public land in Michigan's UP during prime October conditions with the crew at Superior Upland.</desc>
 <date>20261021</date>
@@ -20700,7 +22172,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021020000 +0000" stop="20261021030000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021020000 +0000" stop="20261021030000 +0000">
 <title lang="zh">MeatEater's 12 in 26</title>
 <desc>Clay Newcomb opens Arkansas bear season with a camp steeped in tradition.</desc>
 <date>20261021</date>
@@ -20708,7 +22180,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021030000 +0000" stop="20261021033000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021030000 +0000" stop="20261021033000 +0000">
 <title lang="zh">Buckmasters</title>
 <desc>The Midwest is known for giant deer and there's not a better time to chase them than the rut!</desc>
 <date>20261021</date>
@@ -20716,7 +22188,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021033000 +0000" stop="20261021040000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021033000 +0000" stop="20261021040000 +0000">
 <title lang="zh">Buckventures</title>
 <desc>After 23 seasons of filming Buckventures, Jeff has had an ample amount of success over the years. Let's take a look back at some of his favorite hunts from past &amp; present.</desc>
 <date>20261021</date>
@@ -20724,7 +22196,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021040000 +0000" stop="20261021043000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021040000 +0000" stop="20261021043000 +0000">
 <title lang="zh">Realtree Outdoors</title>
 <desc>The whitetail season kicks off in Georgia and Louisiana.</desc>
 <date>20261021</date>
@@ -20732,7 +22204,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021043000 +0000" stop="20261021050000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021043000 +0000" stop="20261021050000 +0000">
 <title lang="zh">Addicted to the Outdoors</title>
 <desc>This week, we reflect on the unforgettable young hunters, emotional firsts, and life-changing outdoor experiences that not only shaped the kids involved, but also left a lasting impact on the Brunson family and Raven's journey growing up in the outdoors.</desc>
 <date>20261021</date>
@@ -20740,7 +22212,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021050000 +0000" stop="20261021053000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021050000 +0000" stop="20261021053000 +0000">
 <title lang="zh">The Bucks of Tecomate</title>
 <desc>Texas hunting is a world unto itself, and it's not limited to one or two species. It's a veritable smorgasbord of opportunities Highveld will soon prove.</desc>
 <date>20261021</date>
@@ -20748,7 +22220,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021053000 +0000" stop="20261021060000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021053000 +0000" stop="20261021060000 +0000">
 <title lang="zh">Bloodline Hunting</title>
 <desc>This week belongs to the kids as they share an unforgettable hunting camp together built on laughter, lessons, and tradition.</desc>
 <date>20261021</date>
@@ -20756,7 +22228,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021060000 +0000" stop="20261021063000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021060000 +0000" stop="20261021063000 +0000">
 <title lang="zh">Drury's Thirteen</title>
 <desc>It's Phase Four, and Mark Drury reaps the rewards of years of hard work on his new home turf with the harvest of a 179-inch Iowa giant during Pre-Lock.</desc>
 <date>20261021</date>
@@ -20764,7 +22236,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021063000 +0000" stop="20261021070000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021063000 +0000" stop="20261021070000 +0000">
 <title lang="zh">Critical Mass</title>
 <desc>Target buck hunts across Alabama, Iowa, and Kansas deliver nonstop action.</desc>
 <date>20261021</date>
@@ -20772,7 +22244,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021070000 +0000" stop="20261021073000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021070000 +0000" stop="20261021073000 +0000">
 <title lang="zh">Bow Madness</title>
 <desc>Forrest Bonin takes on the Missouri timber during the heart of the rut, chasing a hard-earned whitetail through close encounters and high-pressure stand sits in big buck country!</desc>
 <date>20261021</date>
@@ -20780,7 +22252,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021073000 +0000" stop="20261021080000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021073000 +0000" stop="20261021080000 +0000">
 <title lang="zh">American Archer</title>
 <desc>Joe Thomas travels to remote Northern Manitoba in pursuit of Central Barren Ground Caribou.</desc>
 <date>20261021</date>
@@ -20788,7 +22260,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021080000 +0000" stop="20261021083000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021080000 +0000" stop="20261021083000 +0000">
 <title lang="zh">Driven With Pat &amp; Nicole</title>
 <desc>The Reeve's host a youth hunt at the Driven Headquarters, passing down outdoor skills and values to the next generation.</desc>
 <date>20261021</date>
@@ -20796,7 +22268,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021083000 +0000" stop="20261021090000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021083000 +0000" stop="20261021090000 +0000">
 <title lang="zh">The One</title>
 <desc>Mike is hunting with Glacier Guides for giant coastal brown bears.</desc>
 <date>20261021</date>
@@ -20804,7 +22276,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021090000 +0000" stop="20261021093000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021090000 +0000" stop="20261021093000 +0000">
 <title lang="zh">The Gamekeepers of Mossy Oak</title>
 <desc>Once again joined by Dr. Phil Lavretsky of UTEP to update us on the very important Duck DNA project; as you might recall Phil has dedicated the last five years to understanding the game farm mallards' genes that have been present in the Atlantic Flyway but are now starting to pop up elsewhere; it's a duck hunters podcast that needs to be shared with all waterfowlers.</desc>
 <date>20261021</date>
@@ -20812,7 +22284,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021093000 +0000" stop="20261021100000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021093000 +0000" stop="20261021100000 +0000">
 <title lang="zh">The Lindsey Way</title>
 <desc>This year, an under the radar regular quickly becomes identified after David has multiple encounters, hoping to cross paths one final time in the Hawkeye State!</desc>
 <date>20261021</date>
@@ -20820,7 +22292,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021100000 +0000" stop="20261021103000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021100000 +0000" stop="20261021103000 +0000">
 <title lang="zh">Drury's Thirteen</title>
 <desc>It's Phase Four, and Mark Drury reaps the rewards of years of hard work on his new home turf with the harvest of a 179-inch Iowa giant during Pre-Lock.</desc>
 <date>20261021</date>
@@ -20828,7 +22300,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021103000 +0000" stop="20261021110000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021103000 +0000" stop="20261021110000 +0000">
 <title lang="zh">Critical Mass</title>
 <desc>Target buck hunts across Alabama, Iowa, and Kansas deliver nonstop action.</desc>
 <date>20261021</date>
@@ -20836,7 +22308,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021110000 +0000" stop="20261021113000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021110000 +0000" stop="20261021113000 +0000">
 <title lang="zh">Bow Madness</title>
 <desc>Forrest Bonin takes on the Missouri timber during the heart of the rut, chasing a hard-earned whitetail through close encounters and high-pressure stand sits in big buck country!</desc>
 <date>20261021</date>
@@ -20844,7 +22316,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021113000 +0000" stop="20261021120000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021113000 +0000" stop="20261021120000 +0000">
 <title lang="zh">American Archer</title>
 <desc>Joe Thomas travels to remote Northern Manitoba in pursuit of Central Barren Ground Caribou.</desc>
 <date>20261021</date>
@@ -20852,7 +22324,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021120000 +0000" stop="20261021123000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021120000 +0000" stop="20261021123000 +0000">
 <title lang="zh">Driven With Pat &amp; Nicole</title>
 <desc>The Reeve's host a youth hunt at the Driven Headquarters, passing down outdoor skills and values to the next generation.</desc>
 <date>20261021</date>
@@ -20860,7 +22332,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021123000 +0000" stop="20261021130000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021123000 +0000" stop="20261021130000 +0000">
 <title lang="zh">The One</title>
 <desc>Mike is hunting with Glacier Guides for giant coastal brown bears.</desc>
 <date>20261021</date>
@@ -20868,7 +22340,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021130000 +0000" stop="20261021133000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021130000 +0000" stop="20261021133000 +0000">
 <title lang="zh">The Gamekeepers of Mossy Oak</title>
 <desc>Once again joined by Dr. Phil Lavretsky of UTEP to update us on the very important Duck DNA project; as you might recall Phil has dedicated the last five years to understanding the game farm mallards' genes that have been present in the Atlantic Flyway but are now starting to pop up elsewhere; it's a duck hunters podcast that needs to be shared with all waterfowlers.</desc>
 <date>20261021</date>
@@ -20876,7 +22348,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021133000 +0000" stop="20261021140000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021133000 +0000" stop="20261021140000 +0000">
 <title lang="zh">The Lindsey Way</title>
 <desc>This year, an under the radar regular quickly becomes identified after David has multiple encounters, hoping to cross paths one final time in the Hawkeye State!</desc>
 <date>20261021</date>
@@ -20884,7 +22356,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021140000 +0000" stop="20261021143000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021140000 +0000" stop="20261021143000 +0000">
 <title lang="zh">Drury's Thirteen</title>
 <desc>It's Phase Four, and Mark Drury reaps the rewards of years of hard work on his new home turf with the harvest of a 179-inch Iowa giant during Pre-Lock.</desc>
 <date>20261021</date>
@@ -20892,7 +22364,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021143000 +0000" stop="20261021150000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021143000 +0000" stop="20261021150000 +0000">
 <title lang="zh">Critical Mass</title>
 <desc>Target buck hunts across Alabama, Iowa, and Kansas deliver nonstop action.</desc>
 <date>20261021</date>
@@ -20900,7 +22372,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021150000 +0000" stop="20261021153000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021150000 +0000" stop="20261021153000 +0000">
 <title lang="zh">Bow Madness</title>
 <desc>Forrest Bonin takes on the Missouri timber during the heart of the rut, chasing a hard-earned whitetail through close encounters and high-pressure stand sits in big buck country!</desc>
 <date>20261021</date>
@@ -20908,7 +22380,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021153000 +0000" stop="20261021160000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021153000 +0000" stop="20261021160000 +0000">
 <title lang="zh">American Archer</title>
 <desc>Joe Thomas travels to remote Northern Manitoba in pursuit of Central Barren Ground Caribou.</desc>
 <date>20261021</date>
@@ -20916,7 +22388,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021160000 +0000" stop="20261021163000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021160000 +0000" stop="20261021163000 +0000">
 <title lang="zh">Driven With Pat &amp; Nicole</title>
 <desc>The Reeve's host a youth hunt at the Driven Headquarters, passing down outdoor skills and values to the next generation.</desc>
 <date>20261021</date>
@@ -20924,7 +22396,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021163000 +0000" stop="20261021170000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021163000 +0000" stop="20261021170000 +0000">
 <title lang="zh">The One</title>
 <desc>Mike is hunting with Glacier Guides for giant coastal brown bears.</desc>
 <date>20261021</date>
@@ -20932,7 +22404,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021170000 +0000" stop="20261021173000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021170000 +0000" stop="20261021173000 +0000">
 <title lang="zh">The Gamekeepers of Mossy Oak</title>
 <desc>Once again joined by Dr. Phil Lavretsky of UTEP to update us on the very important Duck DNA project; as you might recall Phil has dedicated the last five years to understanding the game farm mallards' genes that have been present in the Atlantic Flyway but are now starting to pop up elsewhere; it's a duck hunters podcast that needs to be shared with all waterfowlers.</desc>
 <date>20261021</date>
@@ -20940,7 +22412,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021173000 +0000" stop="20261021180000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021173000 +0000" stop="20261021180000 +0000">
 <title lang="zh">The Lindsey Way</title>
 <desc>This year, an under the radar regular quickly becomes identified after David has multiple encounters, hoping to cross paths one final time in the Hawkeye State!</desc>
 <date>20261021</date>
@@ -20948,7 +22420,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021180000 +0000" stop="20261021183000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021180000 +0000" stop="20261021183000 +0000">
 <title lang="zh">The Hunt for Monster Bass</title>
 <desc>Summertime fishing is never easy; the bigger the challenge, the better the reward.</desc>
 <date>20261021</date>
@@ -20956,7 +22428,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021183000 +0000" stop="20261021190000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021183000 +0000" stop="20261021190000 +0000">
 <title lang="zh">In Fisherman TV</title>
 <desc>It's freshwater fishing action with emphasis on top tactical maneuvers, as the In-Fisherman staff go after smallmouth bass; the best lure choices for summer-peaking largemouth bass; new-age classic walleye lures.</desc>
 <date>20261021</date>
@@ -20964,7 +22436,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021190000 +0000" stop="20261021193000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021190000 +0000" stop="20261021193000 +0000">
 <title lang="zh">Realtree Outdoors</title>
 <desc>The whitetail season kicks off in Georgia and Louisiana.</desc>
 <date>20261021</date>
@@ -20972,7 +22444,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021193000 +0000" stop="20261021200000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021193000 +0000" stop="20261021200000 +0000">
 <title lang="zh">Addicted to the Outdoors</title>
 <desc>This week, we reflect on the unforgettable young hunters, emotional firsts, and life-changing outdoor experiences that not only shaped the kids involved, but also left a lasting impact on the Brunson family and Raven's journey growing up in the outdoors.</desc>
 <date>20261021</date>
@@ -20980,7 +22452,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021200000 +0000" stop="20261021203000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021200000 +0000" stop="20261021203000 +0000">
 <title lang="zh">Sporting Classics With Chris Dorsey</title>
 <desc>Chris Dorsey visits the famed King Ranch, the largest ranch in the United States, for big game and quail.</desc>
 <date>20261021</date>
@@ -20988,7 +22460,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021203000 +0000" stop="20261021210000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021203000 +0000" stop="20261021210000 +0000">
 <title lang="zh">Critical Mass</title>
 <desc>Target buck hunts across Alabama, Iowa, and Kansas deliver nonstop action.</desc>
 <date>20261021</date>
@@ -20996,7 +22468,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021210000 +0000" stop="20261021213000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021210000 +0000" stop="20261021213000 +0000">
 <title lang="zh">Hunt Masters</title>
 <desc>The Mathews ARC makes its debut on a new farm in Illinois when an unknown giant appears for Gregg Ritz during the rut.</desc>
 <date>20261021</date>
@@ -21004,7 +22476,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021213000 +0000" stop="20261021220000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021213000 +0000" stop="20261021220000 +0000">
 <title lang="zh">Bone Collector</title>
 <desc>Michael Waddell, Nick Mundt and screaming elk in the Navajo Nation.</desc>
 <date>20261021</date>
@@ -21012,7 +22484,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021220000 +0000" stop="20261021223000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021220000 +0000" stop="20261021223000 +0000">
 <title lang="zh">Driven With Pat &amp; Nicole</title>
 <desc>The Reeve's host a youth hunt at the Driven Headquarters, passing down outdoor skills and values to the next generation.</desc>
 <date>20261021</date>
@@ -21020,7 +22492,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021223000 +0000" stop="20261021230000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021223000 +0000" stop="20261021230000 +0000">
 <title lang="zh">The One</title>
 <desc>Mike is hunting with Glacier Guides for giant coastal brown bears.</desc>
 <date>20261021</date>
@@ -21028,7 +22500,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021230000 +0000" stop="20261021233000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021230000 +0000" stop="20261021233000 +0000">
 <title lang="zh">Buckmasters</title>
 <desc>The Midwest is known for giant deer and there's not a better time to chase them than the rut!</desc>
 <date>20261021</date>
@@ -21036,7 +22508,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261021233000 +0000" stop="20261022000000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261021233000 +0000" stop="20261022000000 +0000">
 <title lang="zh">Headhunters TV</title>
 <desc>Things slow down after tag #2 is punched at the Dirty Bird, so Randy waits to capitalize with his T/C muzzleloader.</desc>
 <date>20261021</date>
@@ -21044,7 +22516,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022000000 +0000" stop="20261022003000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022000000 +0000" stop="20261022003000 +0000">
 <title lang="zh">Offroad Odyssey</title>
 <desc>Adrenaline-pumping action, breathtaking scenery, and unforgettable encounter off-road.</desc>
 <date>20261022</date>
@@ -21052,7 +22524,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022003000 +0000" stop="20261022010000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022003000 +0000" stop="20261022010000 +0000">
 <title lang="zh">Onx Hunt Gameday</title>
 <desc>Mom, wife and now elk hunter, Cami Dowson punches her first bull tag with Dylan and the boys cheering her on in the Montana hills.</desc>
 <date>20261022</date>
@@ -21060,7 +22532,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022010000 +0000" stop="20261022013000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022010000 +0000" stop="20261022013000 +0000">
 <title lang="zh">Bow Madness</title>
 <desc>Forrest Bonin takes on the Missouri timber during the heart of the rut, chasing a hard-earned whitetail through close encounters and high-pressure stand sits in big buck country!</desc>
 <date>20261022</date>
@@ -21068,7 +22540,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022013000 +0000" stop="20261022020000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022013000 +0000" stop="20261022020000 +0000">
 <title lang="zh">Bowlife</title>
 <desc>Levi and his 2 boys are hunting their farm in the mountains of PA.</desc>
 <date>20261022</date>
@@ -21076,7 +22548,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022020000 +0000" stop="20261022023000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022020000 +0000" stop="20261022023000 +0000">
 <title lang="zh">The Bucks of Tecomate</title>
 <desc>Texas hunting is a world unto itself, and it's not limited to one or two species. It's a veritable smorgasbord of opportunities Highveld will soon prove.</desc>
 <date>20261022</date>
@@ -21084,7 +22556,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022023000 +0000" stop="20261022030000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022023000 +0000" stop="20261022030000 +0000">
 <title lang="zh">Bloodline Hunting</title>
 <desc>This week belongs to the kids as they share an unforgettable hunting camp together built on laughter, lessons, and tradition.</desc>
 <date>20261022</date>
@@ -21092,7 +22564,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022030000 +0000" stop="20261022033000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022030000 +0000" stop="20261022033000 +0000">
 <title lang="zh">Eastman's Hunting TV</title>
 <desc>Play cat and mouse with big mule deer in the Rocky Mountain West.</desc>
 <date>20261022</date>
@@ -21100,7 +22572,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022033000 +0000" stop="20261022040000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022033000 +0000" stop="20261022040000 +0000">
 <title lang="zh">The Lindsey Way</title>
 <desc>This year, an under the radar regular quickly becomes identified after David has multiple encounters, hoping to cross paths one final time in the Hawkeye State!</desc>
 <date>20261022</date>
@@ -21108,7 +22580,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022040000 +0000" stop="20261022043000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022040000 +0000" stop="20261022043000 +0000">
 <title lang="zh">Crush With Lee &amp; Tiffany</title>
 <desc>Tiffany, Brantley Gilbert, and Tom Roles all hit Montana with elk tags in.</desc>
 <date>20261022</date>
@@ -21116,7 +22588,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022043000 +0000" stop="20261022050000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022043000 +0000" stop="20261022050000 +0000">
 <title lang="zh">Buck Commander</title>
 <desc>Tombo and King Pedford head to Florida to chase Iguanas and Pythons.</desc>
 <date>20261022</date>
@@ -21124,7 +22596,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022050000 +0000" stop="20261022053000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022050000 +0000" stop="20261022053000 +0000">
 <title lang="zh">The Fowl Life With Chad Belding</title>
 <desc>Just like Dorothy, we click our heels and head back to Kansas to relive some of the best times we've had in the field.</desc>
 <date>20261022</date>
@@ -21132,7 +22604,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022053000 +0000" stop="20261022060000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022053000 +0000" stop="20261022060000 +0000">
 <title lang="zh">The Flush</title>
 <desc>Travis Frank hunts for ruffed grouse &amp; woodcock on public land in Michigan's UP during prime October conditions with the crew at Superior Upland.</desc>
 <date>20261022</date>
@@ -21140,7 +22612,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022060000 +0000" stop="20261022063000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022060000 +0000" stop="20261022063000 +0000">
 <title lang="zh">North American Whitetail</title>
 <desc>Blake Garlock hunts Virginia deer country, where thick cover, hardwood ridges, timber edges, and careful setups create the perfect chance at a mature buck.</desc>
 <date>20261022</date>
@@ -21148,7 +22620,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022063000 +0000" stop="20261022070000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022063000 +0000" stop="20261022070000 +0000">
 <title lang="zh">Bowhunter TV</title>
 <desc>Curt Wells heads to Alberta for an unforgettable moose hunt; after calling in a bull closer than expected Curt rallies and makes a great shot; then, the tables turn when after a quick calling lesson from his guide, Curt calls in another bull moose.</desc>
 <date>20261022</date>
@@ -21156,7 +22628,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022070000 +0000" stop="20261022073000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022070000 +0000" stop="20261022073000 +0000">
 <title lang="zh">Guns &amp; Ammo TV</title>
 <desc>Our Editors review the new version of the beloved Colt M-5 Carbine.</desc>
 <date>20261022</date>
@@ -21164,7 +22636,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022073000 +0000" stop="20261022080000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022073000 +0000" stop="20261022080000 +0000">
 <title lang="zh">Handguns</title>
 <desc>Malfunction clearing and reloading must become second nature so you can focus on the assailant.</desc>
 <date>20261022</date>
@@ -21172,7 +22644,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022080000 +0000" stop="20261022083000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022080000 +0000" stop="20261022083000 +0000">
 <title lang="zh">Gun Stories</title>
 <desc>The unicorn of WWII German firearms.</desc>
 <date>20261022</date>
@@ -21180,7 +22652,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022083000 +0000" stop="20261022090000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022083000 +0000" stop="20261022090000 +0000">
 <title lang="zh">American Rifleman TV</title>
 <desc>Beretta 500 Years Part 1, Ruger Harrier, Model 1860 Colt.</desc>
 <date>20261022</date>
@@ -21188,7 +22660,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022090000 +0000" stop="20261022093000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022090000 +0000" stop="20261022093000 +0000">
 <title lang="zh">Shooting USA</title>
 <desc>JROTC Teams from around the country are on the firing line inside the George Anderson Shooting Center at Camp Perry, OH to crown national team champions, as well as individual champions in Three Position Ten Meter Air Rifle. Plus a new Colt Pro Tip with Wyatt Gibson.</desc>
 <date>20261022</date>
@@ -21196,7 +22668,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022093000 +0000" stop="20261022100000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022093000 +0000" stop="20261022100000 +0000">
 <title lang="zh">Airgunner Challenge</title>
 <desc>We are going head-to-head in our first individual competition. This week we are turning some of our favorite childhood games into targets.</desc>
 <date>20261022</date>
@@ -21204,7 +22676,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022100000 +0000" stop="20261022103000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022100000 +0000" stop="20261022103000 +0000">
 <title lang="zh">North American Whitetail</title>
 <desc>Blake Garlock hunts Virginia deer country, where thick cover, hardwood ridges, timber edges, and careful setups create the perfect chance at a mature buck.</desc>
 <date>20261022</date>
@@ -21212,7 +22684,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022103000 +0000" stop="20261022110000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022103000 +0000" stop="20261022110000 +0000">
 <title lang="zh">Bowhunter TV</title>
 <desc>Curt Wells heads to Alberta for an unforgettable moose hunt; after calling in a bull closer than expected Curt rallies and makes a great shot; then, the tables turn when after a quick calling lesson from his guide, Curt calls in another bull moose.</desc>
 <date>20261022</date>
@@ -21220,7 +22692,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022110000 +0000" stop="20261022113000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022110000 +0000" stop="20261022113000 +0000">
 <title lang="zh">Guns &amp; Ammo TV</title>
 <desc>Our Editors review the new version of the beloved Colt M-5 Carbine.</desc>
 <date>20261022</date>
@@ -21228,7 +22700,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022113000 +0000" stop="20261022120000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022113000 +0000" stop="20261022120000 +0000">
 <title lang="zh">Handguns</title>
 <desc>Malfunction clearing and reloading must become second nature so you can focus on the assailant.</desc>
 <date>20261022</date>
@@ -21236,7 +22708,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022120000 +0000" stop="20261022123000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022120000 +0000" stop="20261022123000 +0000">
 <title lang="zh">Shooting USA</title>
 <desc>JROTC Teams from around the country are on the firing line inside the George Anderson Shooting Center at Camp Perry, OH to crown national team champions, as well as individual champions in Three Position Ten Meter Air Rifle. Plus a new Colt Pro Tip with Wyatt Gibson.</desc>
 <date>20261022</date>
@@ -21244,7 +22716,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="OutdoorChannel.us@HD" start="20261022123000 +0000" stop="20261023000000 +0000">
+<programme channel="OutdoorChannel.us@SD" start="20261022123000 +0000" stop="20261023000000 +0000">
 <title lang="zh">American Rifleman TV</title>
 <desc>Beretta 500 Years Part 1, Ruger Harrier, Model 1860 Colt.</desc>
 <date>20261022</date>
@@ -25684,7 +27156,39 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021000000 +0000" stop="20261021003000 +0000">
+<programme channel="SalemNewsChannel.us@SD" start="20261021000000 +0000" stop="20261021010000 +0000">
+<title lang="zh">Sekulow</title>
+<desc>Legal, political and cultural issues of the day.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="SalemNewsChannel.us@SD" start="20261021010000 +0000" stop="20261021030000 +0000">
+<title lang="zh">Scott Jennings</title>
+<desc />
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="SalemNewsChannel.us@SD" start="20261021030000 +0000" stop="20261021060000 +0000">
+<title lang="zh">The Hugh Hewitt Show</title>
+<desc>Insight and opinion on the news as it happens.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="SalemNewsChannel.us@SD" start="20261021060000 +0000" stop="20261022000000 +0000">
+<title lang="zh">Larry Elder</title>
+<desc>We've got a country to save.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="News12NewJersey.us@SD" start="20261021000000 +0000" stop="20261021003000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25692,7 +27196,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021003000 +0000" stop="20261021010000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021003000 +0000" stop="20261021010000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25700,7 +27204,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021010000 +0000" stop="20261021013000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021010000 +0000" stop="20261021013000 +0000">
 <title lang="zh">Be Well</title>
 <desc>Olympic Swimming Legend Katie Ladecky discusses her work with Catholic Health plus gourmet tailgating.</desc>
 <date>20261021</date>
@@ -25708,7 +27212,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021013000 +0000" stop="20261021020000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021013000 +0000" stop="20261021020000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25716,7 +27220,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021020000 +0000" stop="20261021023000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021020000 +0000" stop="20261021023000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25724,7 +27228,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021023000 +0000" stop="20261021030000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021023000 +0000" stop="20261021030000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25732,7 +27236,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021030000 +0000" stop="20261021033000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021030000 +0000" stop="20261021033000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25740,7 +27244,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021033000 +0000" stop="20261021040000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021033000 +0000" stop="20261021040000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25748,7 +27252,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021040000 +0000" stop="20261021043000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021040000 +0000" stop="20261021043000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25756,7 +27260,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021043000 +0000" stop="20261021050000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021043000 +0000" stop="20261021050000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25764,7 +27268,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021050000 +0000" stop="20261021053000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021050000 +0000" stop="20261021053000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25772,7 +27276,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021053000 +0000" stop="20261021060000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021053000 +0000" stop="20261021060000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25780,7 +27284,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021060000 +0000" stop="20261021063000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021060000 +0000" stop="20261021063000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25788,7 +27292,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021063000 +0000" stop="20261021070000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021063000 +0000" stop="20261021070000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25796,7 +27300,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021070000 +0000" stop="20261021073000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021070000 +0000" stop="20261021073000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25804,7 +27308,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021073000 +0000" stop="20261021080000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021073000 +0000" stop="20261021080000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25812,7 +27316,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021080000 +0000" stop="20261021083000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021080000 +0000" stop="20261021083000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25820,7 +27324,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021083000 +0000" stop="20261021090000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021083000 +0000" stop="20261021090000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25828,7 +27332,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021090000 +0000" stop="20261021093000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021090000 +0000" stop="20261021093000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25836,7 +27340,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021093000 +0000" stop="20261021100000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021093000 +0000" stop="20261021100000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25844,7 +27348,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021100000 +0000" stop="20261021103000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021100000 +0000" stop="20261021103000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25852,7 +27356,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021103000 +0000" stop="20261021110000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021103000 +0000" stop="20261021110000 +0000">
 <title lang="zh">Haunted Tri-State</title>
 <desc>A cozy neighborhood bakery with a sinister side, where spirits refuse to leave the ovens cold.</desc>
 <date>20261021</date>
@@ -25860,7 +27364,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021110000 +0000" stop="20261021113000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021110000 +0000" stop="20261021113000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25868,7 +27372,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021113000 +0000" stop="20261021120000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021113000 +0000" stop="20261021120000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25876,7 +27380,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021120000 +0000" stop="20261021123000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021120000 +0000" stop="20261021123000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25884,7 +27388,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021123000 +0000" stop="20261021130000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021123000 +0000" stop="20261021130000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25892,7 +27396,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021130000 +0000" stop="20261021133000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021130000 +0000" stop="20261021133000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25900,7 +27404,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021133000 +0000" stop="20261021140000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021133000 +0000" stop="20261021140000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25908,7 +27412,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021140000 +0000" stop="20261021143000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021140000 +0000" stop="20261021143000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25916,7 +27420,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021143000 +0000" stop="20261021150000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021143000 +0000" stop="20261021150000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25924,7 +27428,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021150000 +0000" stop="20261021153000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021150000 +0000" stop="20261021153000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25932,7 +27436,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021153000 +0000" stop="20261021160000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021153000 +0000" stop="20261021160000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25940,7 +27444,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021160000 +0000" stop="20261021163000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021160000 +0000" stop="20261021163000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25948,7 +27452,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021163000 +0000" stop="20261021170000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021163000 +0000" stop="20261021170000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25956,7 +27460,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021170000 +0000" stop="20261021173000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021170000 +0000" stop="20261021173000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25964,7 +27468,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021173000 +0000" stop="20261021180000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021173000 +0000" stop="20261021180000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25972,7 +27476,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021180000 +0000" stop="20261021183000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021180000 +0000" stop="20261021183000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25980,7 +27484,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021183000 +0000" stop="20261021190000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021183000 +0000" stop="20261021190000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25988,7 +27492,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021190000 +0000" stop="20261021193000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021190000 +0000" stop="20261021193000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -25996,7 +27500,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021193000 +0000" stop="20261021200000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021193000 +0000" stop="20261021200000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26004,7 +27508,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021200000 +0000" stop="20261021203000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021200000 +0000" stop="20261021203000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26012,7 +27516,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021203000 +0000" stop="20261021210000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021203000 +0000" stop="20261021210000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26020,7 +27524,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021210000 +0000" stop="20261021213000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021210000 +0000" stop="20261021213000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26028,7 +27532,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021213000 +0000" stop="20261021220000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021213000 +0000" stop="20261021220000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26036,7 +27540,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021220000 +0000" stop="20261021223000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021220000 +0000" stop="20261021223000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26044,7 +27548,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021223000 +0000" stop="20261021230000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021223000 +0000" stop="20261021230000 +0000">
 <title lang="zh">Be Well</title>
 <desc>The best beauty products to help with hydration plus reality star Petiri Reeed.</desc>
 <date>20261021</date>
@@ -26052,7 +27556,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021230000 +0000" stop="20261021233000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021230000 +0000" stop="20261021233000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26060,7 +27564,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261021233000 +0000" stop="20261022000000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261021233000 +0000" stop="20261022000000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261021</date>
@@ -26068,7 +27572,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022000000 +0000" stop="20261022003000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022000000 +0000" stop="20261022003000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26076,7 +27580,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022003000 +0000" stop="20261022010000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022003000 +0000" stop="20261022010000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26084,7 +27588,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022010000 +0000" stop="20261022013000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022010000 +0000" stop="20261022013000 +0000">
 <title lang="zh">Be Well</title>
 <desc>The best beauty products to help with hydration plus reality star Petiri Reeed.</desc>
 <date>20261022</date>
@@ -26092,7 +27596,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022013000 +0000" stop="20261022020000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022013000 +0000" stop="20261022020000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26100,7 +27604,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022020000 +0000" stop="20261022023000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022020000 +0000" stop="20261022023000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26108,7 +27612,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022023000 +0000" stop="20261022030000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022023000 +0000" stop="20261022030000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26116,7 +27620,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022030000 +0000" stop="20261022033000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022030000 +0000" stop="20261022033000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26124,7 +27628,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022033000 +0000" stop="20261022040000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022033000 +0000" stop="20261022040000 +0000">
 <title lang="zh">Made In</title>
 <desc>Steinway &amp; Sons is a part of NY History &amp; craftsmanship, made from over 12,000 pieces &amp; taking a year to build. Made In — honoring hardworking creators, bold entrepreneurs, &amp; the spirit that fuels our communities.</desc>
 <date>20261022</date>
@@ -26132,7 +27636,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022040000 +0000" stop="20261022043000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022040000 +0000" stop="20261022043000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26140,7 +27644,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022043000 +0000" stop="20261022050000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022043000 +0000" stop="20261022050000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26148,7 +27652,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022050000 +0000" stop="20261022053000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022050000 +0000" stop="20261022053000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26156,7 +27660,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022053000 +0000" stop="20261022060000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022053000 +0000" stop="20261022060000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26164,7 +27668,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022060000 +0000" stop="20261022063000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022060000 +0000" stop="20261022063000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26172,7 +27676,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022063000 +0000" stop="20261022070000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022063000 +0000" stop="20261022070000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26180,7 +27684,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022070000 +0000" stop="20261022073000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022070000 +0000" stop="20261022073000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26188,7 +27692,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022073000 +0000" stop="20261022080000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022073000 +0000" stop="20261022080000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26196,7 +27700,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022080000 +0000" stop="20261022083000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022080000 +0000" stop="20261022083000 +0000">
 <title lang="zh">Hakeem Jeffries on the Record</title>
 <desc>Stay informed with the latest breaking news and headlines.</desc>
 <date>20261022</date>
@@ -26204,7 +27708,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022083000 +0000" stop="20261022090000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022083000 +0000" stop="20261022090000 +0000">
 <title lang="zh">News 12 Long Island</title>
 <desc>Hyper-local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26212,7 +27716,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022090000 +0000" stop="20261022093000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022090000 +0000" stop="20261022093000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26220,7 +27724,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022093000 +0000" stop="20261022100000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022093000 +0000" stop="20261022100000 +0000">
 <title lang="zh">Haunted Tri-State</title>
 <desc>Kristie and the team attempt to make contact with the spirits of former inmates.</desc>
 <date>20261022</date>
@@ -26228,7 +27732,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022100000 +0000" stop="20261022103000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022100000 +0000" stop="20261022103000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26236,7 +27740,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022103000 +0000" stop="20261022110000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022103000 +0000" stop="20261022110000 +0000">
 <title lang="zh">Crime Files</title>
 <desc>Ben Novack Jr, was found bound, tortured and beaten in a Westchester hotel, but who did it?</desc>
 <date>20261022</date>
@@ -26244,7 +27748,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022110000 +0000" stop="20261022113000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022110000 +0000" stop="20261022113000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26252,7 +27756,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022113000 +0000" stop="20261022120000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022113000 +0000" stop="20261022120000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26260,7 +27764,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022120000 +0000" stop="20261022123000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022120000 +0000" stop="20261022123000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -26268,7 +27772,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="News12PlusNewJersey.us@HD" start="20261022123000 +0000" stop="20261023000000 +0000">
+<programme channel="News12NewJersey.us@SD" start="20261022123000 +0000" stop="20261023000000 +0000">
 <title lang="zh">News 12 New Jersey</title>
 <desc>Local news, weather, traffic, politics, investigative and more.</desc>
 <date>20261022</date>
@@ -30432,6 +31936,358 @@
 <title lang="zh">Will &amp; Grace</title>
 <desc>Jack's insistence that Will be nicer to Estefan backfires; Grace unknowingly knocks over a prominent figure; when Karen discovers Noah plans to kill off the main character of her favorite romance novel, she forces him to rewrite the story.</desc>
 <date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021002000 +0000" stop="20261021005200 +0000">
+<title lang="zh">Super Senses: Wild Feats of Evolution</title>
+<desc>Many animals rely on their pronounced hearing in their daily struggle for survival, such as moths escaping a bat attack; most animals have a much more sensitive ear than humans.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021005200 +0000" stop="20261021015600 +0000">
+<title lang="zh">Carousel of Life</title>
+<desc>Orchards are unique ecosystems; as seasons change, there is an interplay of nature, man and animal.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021015600 +0000" stop="20261021030000 +0000">
+<title lang="zh">Antarctica</title>
+<desc>Exploring Antarctica, one of the world's most beautiful, yet inhospitable, landscapes.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021030000 +0000" stop="20261021040400 +0000">
+<title lang="zh">A Wolf's Journey</title>
+<desc>Driven out of his pack, a young wolf must face his fate alone and try to survive in a world ruled by man.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021040400 +0000" stop="20261021050800 +0000">
+<title lang="zh">Animal Doctors</title>
+<desc>Exploring how animals developed over time and generations their own medicine and health care strategies and how have these may have been passed onto early humans.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021050800 +0000" stop="20261021060800 +0000">
+<title lang="zh">Chicken Planet</title>
+<desc>The love story between chickens and humans has lasted for over 5000 years; today, there are over 19 billion chickens on Earth, three times more than human beings and more than any other bird species.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021060800 +0000" stop="20261021071200 +0000">
+<title lang="zh">Baboon Bandits</title>
+<desc>Follows the last baboons of Table Mountain as they have become a plague; the residents are split between sympathy and rage.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021071200 +0000" stop="20261021081500 +0000">
+<title lang="zh">Wild Faces of Switzerland</title>
+<desc>The ibex, marmot, and European adder have all developed strategies to survive the alpine winter.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021081500 +0000" stop="20261021091900 +0000">
+<title lang="zh">Wildest Africa</title>
+<desc>The Okavango Delta is a tranquil oasis within Botswana's desert.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021091900 +0000" stop="20261021102300 +0000">
+<title lang="zh">Wildest Africa</title>
+<desc>Namibia is an arid, rough land; however, it shows no sign of losing popularity with animals and people.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021102300 +0000" stop="20261021112700 +0000">
+<title lang="zh">Wildest Africa</title>
+<desc>In the heart of Africa lies one of the world's most magnificent splendors, the Ngorongoro crater.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021112700 +0000" stop="20261021115900 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>A look at the mighty grizzly bear, the tiny but powerful ant, the intimidating crocodile: some of the world's strongest animals.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021115900 +0000" stop="20261021123200 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>Investigating which animal is the fastest, featuring animals that move at extreme speeds, including a kangaroo, a zebra, a cheetah and a bald eagle.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021123200 +0000" stop="20261021130400 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>An exciting look at nature, with close-ups of wild cats, snakes, crocodiles, scorpions and more, focusing on their methods of attack and defense.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021130400 +0000" stop="20261021133500 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>Nature documentary series exploring the different ways that animals behave This episode looks at some of the cutest creatures.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021133500 +0000" stop="20261021135700 +0000">
+<title lang="zh">Fascinating Places</title>
+<desc>For wild animals in Central Europe, early spring is a time to gain energy and produce offspring.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021135700 +0000" stop="20261021141700 +0000">
+<title lang="zh">Fascinating Places</title>
+<desc>The traditional mixed orchard is a crucially important cultivated landscape, especially in fall and winter.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021141700 +0000" stop="20261021143800 +0000">
+<title lang="zh">Fascinating Places</title>
+<desc>In spring and summer, the orchard meadow reveals an invaluable habitat for the local flora and fauna.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021143800 +0000" stop="20261021145800 +0000">
+<title lang="zh">Fascinating Places</title>
+<desc>This episode sets off on a tour in the winter wilderness of Central Europe to see how local animals survive.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021145800 +0000" stop="20261021151900 +0000">
+<title lang="zh">Fascinating Places</title>
+<desc>This episode embarks on an exciting journey of discovery through the winter wilderness of Central Europe.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021151900 +0000" stop="20261021162200 +0000">
+<title lang="zh">Wild Faces of Switzerland</title>
+<desc>Taking a journey through the almost untouched wilderness: The Jura Mountains.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021162200 +0000" stop="20261021172500 +0000">
+<title lang="zh">Wild Faces of Switzerland</title>
+<desc>Focusing on Ticino; reaching from the Tessin Alps down to the charming Muggio Valley.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021172500 +0000" stop="20261021182800 +0000">
+<title lang="zh">Wild Faces of Switzerland</title>
+<desc>Taking a journey from the highest peaks of the Bernese Alps to a finish at the Rhine Falls.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021182800 +0000" stop="20261021190000 +0000">
+<title lang="zh">Super Senses: Wild Feats of Evolution</title>
+<desc>Many animals need a strong sense of sight to capture their prey; cats can see at night and birds of prey can catch their quarry from immense heights.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021190000 +0000" stop="20261021193200 +0000">
+<title lang="zh">Super Senses: Wild Feats of Evolution</title>
+<desc>Many animals rely on their pronounced hearing in their daily struggle for survival, such as moths escaping a bat attack; most animals have a much more sensitive ear than humans.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021193200 +0000" stop="20261021203700 +0000">
+<title lang="zh">Baboon Bandits</title>
+<desc>Follows the last baboons of Table Mountain as they have become a plague; the residents are split between sympathy and rage.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021203700 +0000" stop="20261021213600 +0000">
+<title lang="zh">Chicken Planet</title>
+<desc>The love story between chickens and humans has lasted for over 5000 years; today, there are over 19 billion chickens on Earth, three times more than human beings and more than any other bird species.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021213600 +0000" stop="20261021224100 +0000">
+<title lang="zh">A Wolf's Journey</title>
+<desc>Driven out of his pack, a young wolf must face his fate alone and try to survive in a world ruled by man.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021224100 +0000" stop="20261021234500 +0000">
+<title lang="zh">Animal Doctors</title>
+<desc>Exploring how animals developed over time and generations their own medicine and health care strategies and how have these may have been passed onto early humans.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261021234500 +0000" stop="20261022004900 +0000">
+<title lang="zh">Carousel of Life</title>
+<desc>Orchards are unique ecosystems; as seasons change, there is an interplay of nature, man and animal.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022004900 +0000" stop="20261022015300 +0000">
+<title lang="zh">Antarctica</title>
+<desc>Exploring Antarctica, one of the world's most beautiful, yet inhospitable, landscapes.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022015300 +0000" stop="20261022025500 +0000">
+<title lang="zh">Wild Faces of Switzerland</title>
+<desc>The ibex, marmot, and European adder have all developed strategies to survive the alpine winter.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022025500 +0000" stop="20261022035900 +0000">
+<title lang="zh">Wildest Africa</title>
+<desc>The Okavango Delta is a tranquil oasis within Botswana's desert.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022035900 +0000" stop="20261022050400 +0000">
+<title lang="zh">Wildest Africa</title>
+<desc>Namibia is an arid, rough land; however, it shows no sign of losing popularity with animals and people.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022050400 +0000" stop="20261022060800 +0000">
+<title lang="zh">Wildest Africa</title>
+<desc>In the heart of Africa lies one of the world's most magnificent splendors, the Ngorongoro crater.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022060800 +0000" stop="20261022064000 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>A look at the mighty grizzly bear, the tiny but powerful ant, the intimidating crocodile: some of the world's strongest animals.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022064000 +0000" stop="20261022071200 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>Investigating which animal is the fastest, featuring animals that move at extreme speeds, including a kangaroo, a zebra, a cheetah and a bald eagle.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022071200 +0000" stop="20261022074400 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>An exciting look at nature, with close-ups of wild cats, snakes, crocodiles, scorpions and more, focusing on their methods of attack and defense.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022074400 +0000" stop="20261022081600 +0000">
+<title lang="zh">Wild Ones</title>
+<desc>Nature documentary series exploring the different ways that animals behave This episode looks at some of the cutest creatures.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022081600 +0000" stop="20261022092000 +0000">
+<title lang="zh">Carousel of Life</title>
+<desc>Orchards are unique ecosystems; as seasons change, there is an interplay of nature, man and animal.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022092000 +0000" stop="20261022102400 +0000">
+<title lang="zh">Antarctica</title>
+<desc>Exploring Antarctica, one of the world's most beautiful, yet inhospitable, landscapes.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022102400 +0000" stop="20261022112900 +0000">
+<title lang="zh">A Wolf's Journey</title>
+<desc>Driven out of his pack, a young wolf must face his fate alone and try to survive in a world ruled by man.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022112900 +0000" stop="20261022123300 +0000">
+<title lang="zh">Animal Doctors</title>
+<desc>Exploring how animals developed over time and generations their own medicine and health care strategies and how have these may have been passed onto early humans.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="MagellanTVNow.us@SD" start="20261022123300 +0000" stop="20261023000000 +0000">
+<title lang="zh">Chicken Planet</title>
+<desc>The love story between chickens and humans has lasted for over 5000 years; today, there are over 19 billion chickens on Earth, three times more than human beings and more than any other bird species.</desc>
+<date>20261022</date>
 <audio>
 <stereo>stereo</stereo>
 </audio>
@@ -35879,6 +37735,70 @@
 <programme channel="QVC2.us@SD" start="20261022120000 +0000" stop="20261023000000 +0000">
 <title lang="zh">Shopping</title>
 <desc />
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261021050000 +0000" stop="20261021060000 +0000">
+<title lang="zh">Race to the ATP &amp; WTA Finals</title>
+<desc>Late season analysis of the ATP and WTA tours.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261021060000 +0000" stop="20261021103000 +0000">
+<title lang="zh">Center Court</title>
+<desc>Tennis action from around the world.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261021103000 +0000" stop="20261021180000 +0000">
+<title lang="zh">Center Court Live</title>
+<desc>Tennis action from around the world.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261021180000 +0000" stop="20261022050000 +0000">
+<title lang="zh">Center Court Live</title>
+<desc>Tennis action from around the world.</desc>
+<date>20261021</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261022050000 +0000" stop="20261022080000 +0000">
+<title lang="zh">Center Court</title>
+<desc>Tennis action from around the world.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261022080000 +0000" stop="20261022090000 +0000">
+<title lang="zh">Race to the ATP &amp; WTA Finals</title>
+<desc>Late season analysis of the ATP and WTA tours.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261022090000 +0000" stop="20261022103000 +0000">
+<title lang="zh">Center Court</title>
+<desc>Tennis action from around the world.</desc>
+<date>20261022</date>
+<audio>
+<stereo>stereo</stereo>
+</audio>
+</programme>
+<programme channel="TennisChannel.us@SD" start="20261022103000 +0000" stop="20261023000000 +0000">
+<title lang="zh">Center Court Live</title>
+<desc>Tennis action from around the world.</desc>
 <date>20261022</date>
 <audio>
 <stereo>stereo</stereo>
