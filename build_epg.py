@@ -43,6 +43,31 @@ def loose(name):
     return "".join(w for w in norm(name).split() if w not in NOISE)
 
 
+# epg.pw appends a region/feed qualifier that our tvg-ids carry instead:
+#   epg.pw "Bravo HD"            vs ours "Bravo.us@East"
+#   epg.pw "CNN HD"              vs ours "CNN.us@SD"
+#   epg.pw "USA Network HD (Pacific)" vs ours "USANetwork.us@SD"
+#   epg.pw "ABC National Feed Pacific"  vs ours "ABC.us@SD"
+# Dropping these qualifiers lets the two sides meet on the channel name.
+# Without it the guide matched only 11% of channels.
+QUALIFIER = re.compile(
+    r"\b(?:national feed|local feed|feed|pacific|east coast|west coast|"
+    r"eastern|western|mountain|central|atlantic|pacific time|eastern time|"
+    r"mountain time|central time|latina|español|espanol|english|latam|"
+    r"direct kick|uhd|hd|sd|4k|fhd|feeds?)\b", re.I)
+
+
+def strip_qualifiers(name):
+    s = QUALIFIER.sub(" ", name or "")
+    s = re.sub(r"[(\[][^)\]]*[)\]]", " ", s)
+    s = re.sub(r"[^a-z0-9]+", " ", s.lower())
+    return " ".join(s.split())
+
+
+def loose_stripped(name):
+    return "".join(w for w in strip_qualifiers(name).split() if w not in NOISE)
+
+
 def playlist_tvgs():
     """tvg-id -> display name, from the live playlist."""
     rows, pending = [], None
@@ -72,6 +97,7 @@ def playlist_tvgs():
 def main():
     tvgs = playlist_tvgs()
     want_norm, want_loose = {}, {}
+    want_strip, want_strip_loose = {}, {}
     for tvg, name in tvgs.items():
         k = norm(name)
         if k:
@@ -79,19 +105,26 @@ def main():
         lk = loose(name)
         if lk:
             want_loose.setdefault(lk, tvg)
+        sk = strip_qualifiers(name)
+        if sk:
+            want_strip.setdefault(sk, tvg)
+        sl = loose_stripped(name)
+        if sl:
+            want_strip_loose.setdefault(sl, tvg)
         # The tvg-id carries the channel name too ("Bravo.us@East" -> "Bravo"),
         # and epg.pw sometimes labels a channel differently from the playlist
         # ("Bravo HD"). Index both spellings so the guide matches more often.
         base = tvg.split("@")[0].split(".")[0]
         if base and base != name:
-            bk = norm(base)
-            if bk:
-                want_norm.setdefault(bk, tvg)
-            bl = loose(base)
-            if bl:
-                want_loose.setdefault(bl, tvg)
-    print("playlist tvg-ids: %s (norm=%s loose=%s)"
-          % (len(tvgs), len(want_norm), len(want_loose)), flush=True)
+            for table, fn in ((want_norm, norm), (want_loose, loose),
+                              (want_strip, strip_qualifiers),
+                              (want_strip_loose, loose_stripped)):
+                bk = fn(base)
+                if bk:
+                    table.setdefault(bk, tvg)
+    print("playlist tvg-ids: %s (norm=%s loose=%s strip=%s)"
+          % (len(tvgs), len(want_norm), len(want_loose), len(want_strip)),
+          flush=True)
 
     # ---- pass 1: read EPG channel id -> display name
     epg_name = {}
@@ -115,27 +148,38 @@ def main():
 
     # ---- match: epg numeric id -> playlist tvg-id
     #
-    # Two passes. Pass A takes only exact normalized-name matches, so a
-    # channel never gets stolen by a looser match. Pass B then fills the
-    # remaining channels with loose matches, and skips any tvg-id that a
-    # pass-A match already claimed.
+    # Four passes, strictest first, so a channel is never stolen by a looser
+    # match:
+    #   A exact normalized name
+    #   B loose name (filler words removed)
+    #   C name with region/feed qualifiers stripped ("USA Network HD (Pacific)")
+    #   D loose name with qualifiers stripped
+    # A tvg-id is claimed by the first pass that matches it.
     id_map = {}
     claimed = set()
-    for eid, name in epg_name.items():
-        tvg = want_norm.get(norm(name))
+
+    def take(eid, tvg):
         if tvg and tvg not in claimed:
             id_map[eid] = tvg
             claimed.add(tvg)
-    exact = len(id_map)
+
     for eid, name in epg_name.items():
-        if eid in id_map:
-            continue
-        tvg = want_loose.get(loose(name))
-        if tvg and tvg not in claimed:
-            id_map[eid] = tvg
-            claimed.add(tvg)
-    print("matched: %s channels (%s exact, %s loose)"
-          % (len(id_map), exact, len(id_map) - exact), flush=True)
+        take(eid, want_norm.get(norm(name)))
+    a = len(id_map)
+    for eid, name in epg_name.items():
+        if eid not in id_map:
+            take(eid, want_loose.get(loose(name)))
+    b = len(id_map) - a
+    for eid, name in epg_name.items():
+        if eid not in id_map:
+            take(eid, want_strip.get(strip_qualifiers(name)))
+    c = len(id_map) - a - b
+    for eid, name in epg_name.items():
+        if eid not in id_map:
+            take(eid, want_strip_loose.get(loose_stripped(name)))
+    d = len(id_map) - a - b - c
+    print("matched: %s channels (exact=%s loose=%s stripped=%s stripped-loose=%s)"
+          % (len(id_map), a, b, c, d), flush=True)
     if not id_map:
         raise SystemExit("no matches - refusing to write an empty guide")
 
