@@ -1,0 +1,5 @@
+https://beexly.github.io/roku-iptv/tv.m3u
+https://beexly.github.io/roku-iptv/vod.m3u
+https://beexly.github.io/roku-iptv/epg.xml
+https://beexly.github.io/roku-iptv/player.html
+https://beexly.github.io/roku-iptv/setup.html
