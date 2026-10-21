@@ -62,8 +62,8 @@ jobs:
         run: |
           set -euo pipefail
           pip install --quiet --upgrade pip
-          pip install --quiet "qrcode>=7.4"
-          python -c "import qrcode; print('qrcode', qrcode.__version__)"
+          pip install --quiet -r requirements.txt
+          python -c "import qrcode; print('qrcode import OK', qrcode.__file__)"
 
       - name: Restore probe cache
         uses: actions/cache@v4
