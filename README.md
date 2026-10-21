@@ -10,6 +10,7 @@ build loop and not in the delivery path.
 | Live TV playlist | `https://beexly.github.io/roku-iptv/tv.m3u` |
 | Movies + TV series (VOD) | `https://beexly.github.io/roku-iptv/vod.m3u` |
 | EPG guide (XMLTV) | `https://beexly.github.io/roku-iptv/epg.xml` |
+| Setup card (QR code + copy-able URLs) | `https://beexly.github.io/roku-iptv/setup.html` |
 
 ## Architecture
 
@@ -18,16 +19,34 @@ sources            probe-once            render            deploy         verify
 -------            ----------            ------            ------         ------
 iptv-org/iptv  ┐
 Free-TV/IPTV     ├──> ffprobe ──> cache.json ──> tv.m3u  ──┐
-HerbertHe        │   (one probe       (probed    vod.m3u    ├──> GitHub  ──> verify.py
-Archive.org      ┘    per stream)      once)     epg.xml    │    Pages      (gates the
-                                     ▲                                  │     deploy)
+HerbertHe        │   (one probe       (actions/ vod.m3u    ├──> Pages  ──> verify.py
+Archive.org      ┘    per stream)      cache)     epg.xml    │    artifact     (gates the
+                                     ▲              setup.html│    deploy)      deploy)
                                      └────────── daily CI ──────────────┘
 ```
 
 **Probe once, publish many.** Every stream is probed exactly once per build and
-the verdict is cached in `cache.json`, which is committed to the repo. The cache
-is the expensive part; regenerating a playlist from it is free. That is what
-makes adding a second viewer cheap.
+the verdict is cached, so regenerating a playlist from the cache is free. The
+cache lives in `actions/cache`, not in the repo.
+
+**Build output is never committed.** The CI job uploads `dist/` as a Pages
+artifact and deploys from the artifact. Committing build output back to the
+branch caused rebase conflicts in generated files and raced with the CI run.
+
+### CI job graph
+
+```
+probe  ──>  deploy  ──>  verify  ──>  summary
+(build, EPG,  (Pages      (checks the
+ VOD, QR)      artifact)   published URLs)
+```
+
+`verify.py` checks the **published** URLs, not the local files: HTTP 200,
+correct content type, `#EXTM3U` header, minimum channel count, every `EXTINF`
+followed by a URL, and no duplicate channel identities. It exits non-zero on
+any failure, which fails the job. `verify_qr.py` additionally decodes the
+setup card's QR code with OpenCV and checks the payload is the playlist URL —
+a QR that a phone cannot read is worse than no QR.
 
 ## How it works
 
@@ -38,11 +57,6 @@ remaps the epg.pw XMLTV guide onto the surviving `tvg-id`s. `build_vod.py`
 collects feature films and classic TV series from Archive.org, whose
 public-domain items expose original `.mp4` files over plain HTTPS with range
 support — real on-demand video, not a live stream in a trenchcoat.
-
-`verify.py` then checks the **published** URLs, not the local files: HTTP 200,
-correct content type, `#EXTM3U` header, minimum channel count, every `EXTINF`
-followed by a URL, and no duplicate channel identities. It exits non-zero on
-any failure, which fails the CI job before anything is published.
 
 ### Source playlists (free, legal, community-maintained)
 
@@ -56,29 +70,34 @@ any failure, which fails the CI job before anything is published.
 
 **You have to paste the URL into the app once.** This cannot be automated.
 
-Roku's ECP control API is LAN-only and its app set is not scriptable from
-outside; the app's own text entry cannot be driven remotely, and this TV
-exposes no `screencap` endpoint at all, so there is no way to verify what is
-on screen programmatically. ECP can launch a channel and query state, and
-nothing more.
+Roku's ECP control API is LAN-only; it can launch a channel and query state,
+and that is all. The app's own text entry cannot be driven remotely, and this
+TV exposes no `screencap` endpoint, so there is no way to verify what is on
+screen programmatically. Blind keypress sequences are not used — without
+visual feedback there is no way to know where they landed.
 
-So: install the app, open it, paste the URL, done. After that the app refreshes
-on its own schedule and the daily CI keeps the content fresh underneath it.
+So: install the app, open it, add the playlist, done. After that the app
+refreshes on its own schedule and the daily CI keeps the content fresh
+underneath it.
 
-## Choosing a player
+### The app
 
-Verify against the **current** Roku Channel Store listing before assuming an
-app accepts an M3U URL — app capabilities change, and this repo deliberately
-does not hard-code a recommendation that may have gone stale.
+**Xtream IPTV Player** (Roku Channel Store id `814924`) — free, and its
+listing states it supports **M3U or Xtream Codes** URLs, so a plain playlist
+URL works. It also offers "scan to add a playlist", which opens the vendor
+site (`xtreamtvplayer.pro`) where playlists can be managed in a browser and
+synced to the TV. That is a convenience path, not a requirement — the app
+accepts the URL directly.
 
-The playlist is a plain M3U over HTTPS. Any player that accepts a **Playlist /
-M3U URL** will work. Players that only accept **Xtream Codes**
-(server / port / username / password) will not — that is a different protocol
-and needs a middleware panel, not a static file.
+The `setup.html` card carries the playlist URL, the guide URL and a QR code of
+the playlist URL, so a phone can read it off the screen instead of typing it.
 
-**Backup option:** if the preferred app turns out to be Xtream-Codes-only, the
-upgrade path is to run a middleware panel that speaks Xtream Codes and outputs
-M3U *and* Xtream from the same sources. See below.
+**Backup app:** any Roku channel that accepts a Playlist/M3U URL. Verify the
+current Channel Store listing before recommending one — app capabilities
+change, and this repo deliberately does not hard-code a recommendation that
+may have gone stale. Players that accept **only Xtream Codes**
+(server / port / username / password) will not work with a static M3U; that is
+a different protocol and needs a middleware panel.
 
 ## Optional upgrade path: Dispatcharr on a small VPS
 
@@ -109,8 +128,10 @@ user is responsible for what they watch and where.
 python pipeline.py      # rebuild tv.m3u from sources (slow: probes every stream)
 python build_epg.py     # remap the guide onto tv.m3u
 python build_vod.py     # rebuild vod.m3u from Archive.org
-python publish.py       # push to GitHub Pages
+python build_setup.py   # rebuild dist/setup.html with the QR code
+python publish.py       # trigger the CI publish and verify the result
 python verify.py        # check the published URLs
+python test_published.py both 40   # end-to-end playability of what is live
 ```
 
 Tunables: `IPTV_WORKERS`, `IPTV_PROBE_TIMEOUT`, `IPTV_PRECHECK_TIMEOUT`,
