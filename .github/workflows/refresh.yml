@@ -28,9 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      FFPROBE: /usr/bin/ffprobe
+      IPTV_WORKERS: "16"
+      IPTV_PROBE_TIMEOUT: "12"
+      IPTV_PRECHECK_TIMEOUT: "6"
     steps:
       - uses: actions/checkout@v4
+        with:
+          # the probe cache is committed to the repo, so it must be fetched
+          # in full history or a shallow clone will not have it
+          fetch-depth: 0
 
       - name: Install ffmpeg
         run: |
@@ -41,13 +47,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Cache probe results
-        uses: actions/cache@v4
-        with:
-          path: cache.json
-          key: probe-${{ github.run_id }}
-          restore-keys: probe-
 
       - name: Build verified playlist
         run: |
@@ -104,12 +103,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add tv.m3u epg.xml cache.json
           if git diff --staged --quiet; then
-            echo "no changes"
+            echo "no content changes"
+            git pull --rebase --autostash origin main || true
+            git push origin main || true
             exit 0
           fi
           n=$(grep -c '^#EXTINF' tv.m3u)
           git commit -m "playlist: $n verified channels ($(date -u +%Y-%m-%d))"
-          git push
+          # A concurrent local publish may have pushed to main. Rebase onto it
+          # rather than failing the run.
+          git pull --rebase --autostash origin main || git rebase --abort || true
+          git push origin main
 
       - name: Verify published URL serves the right MIME
         run: |
