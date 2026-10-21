@@ -1,0 +1,17 @@
+# Build output is never committed. CI publishes it as a Pages artifact
+# (actions/upload-pages-artifact + actions/deploy-pages); the probe cache
+# lives in actions/cache. See .github/workflows/refresh.yml.
+tv.m3u
+vod.m3u
+epg.xml
+verified.m3u
+cache.json
+vod_state.json
+dist/
+
+# Local scratch
+__pycache__/
+*.pyc
+*.bak.*
+publish_state.json
+refresh.log

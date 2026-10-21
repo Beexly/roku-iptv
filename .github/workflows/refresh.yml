@@ -1,8 +1,15 @@
 name: refresh
 
 # Rebuilds the playlist in cloud CI so the Roku's playlist never depends on
-# the user's laptop being awake. Commits tv.m3u + epg.xml to main, which
-# GitHub Pages publishes at https://beexly.github.io/roku-iptv/
+# the user's laptop being awake.
+#
+# The build output is NEVER committed back to the branch. It is uploaded as a
+# Pages artifact and deployed from the artifact (actions/deploy-pages), so
+# there is no commit/push race with anything else touching the repo and no
+# merge conflicts in generated files.
+#
+# Probe results are cached with actions/cache so the next run only re-probes
+# what changed. The cache is a CI artifact, not a repo file.
 
 on:
   schedule:
@@ -21,22 +28,25 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build:
+  probe:
+    name: probe
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 55
     env:
       IPTV_WORKERS: "16"
       IPTV_PROBE_TIMEOUT: "12"
       IPTV_PRECHECK_TIMEOUT: "6"
+      VOD_MAX_ITEMS: "1200"
+    outputs:
+      live_count: ${{ steps.validate.outputs.live_count }}
+      vod_count: ${{ steps.validate.outputs.vod_count }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          # the probe cache is committed to the repo, so it must be fetched
-          # in full history or a shallow clone will not have it
-          fetch-depth: 0
 
       - name: Install ffmpeg
         run: |
@@ -48,7 +58,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build verified playlist
+      - name: Restore probe cache
+        uses: actions/cache@v4
+        with:
+          path: cache.json
+          key: probe-${{ github.run_id }}
+          restore-keys: probe-
+
+      - name: Build live playlist
         run: |
           set -euo pipefail
           if [ "${{ inputs.force }}" = "true" ]; then
@@ -64,81 +81,110 @@ jobs:
           python build_epg.py epg_raw.xml
           rm -f epg_raw.xml
 
-      - name: Build VOD playlist (movies + TV series)
+      - name: Build VOD playlist
         run: |
           set -euo pipefail
           python build_vod.py
-          n=$(grep -c '^#EXTINF' vod.m3u)
-          echo "vod entries: $n"
-          if [ "$n" -lt 50 ]; then
-            echo "ABORT: only $n VOD entries"
-            exit 1
-          fi
 
-      - name: Verify outputs
+      - name: Validate build output
+        id: validate
         run: |
           set -euo pipefail
           n=$(grep -c '^#EXTINF' tv.m3u)
-          echo "channels: $n"
-          if [ "$n" -lt 400 ]; then
-            echo "ABORT: only $n channels, refusing to publish"
-            exit 1
-          fi
-          # the first line must be the M3U header
-          head -1 tv.m3u | grep -q '^#EXTM3U' || { echo "bad header"; exit 1; }
+          v=$(grep -c '^#EXTINF' vod.m3u)
+          echo "live=$n vod=$v"
+          [ "$n" -ge 400 ] || { echo "ABORT: only $n live channels"; exit 1; }
+          [ "$v" -ge 50 ]  || { echo "ABORT: only $v VOD entries"; exit 1; }
+          head -1 tv.m3u | grep -q '^#EXTM3U' || { echo "bad tv header"; exit 1; }
           head -1 vod.m3u | grep -q '^#EXTM3U' || { echo "bad vod header"; exit 1; }
-          # every EXTINF must be followed by a URL
+          # every EXTINF must be followed by a URL line
           python - <<'PY'
           import sys
-          bad = 0
-          prev = None
-          for line in open("tv.m3u", encoding="utf-8", errors="replace"):
-              s = line.strip()
-              if not s:
-                  continue
-              if prev is not None:
-                  if not prev.startswith("#EXTINF"):
-                      bad += 1
-                  prev = None
-                  continue
-              if s.startswith("#EXTINF"):
-                  prev = s
-          print("malformed rows:", bad)
-          sys.exit(1 if bad else 0)
+          for name in ("tv.m3u", "vod.m3u"):
+              rows = [l.strip() for l in open(name, encoding="utf-8", errors="replace") if l.strip()]
+              bad = 0
+              for i, line in enumerate(rows):
+                  if line.startswith("#EXTINF"):
+                      if i + 1 >= len(rows) or rows[i + 1].startswith("#"):
+                          bad += 1
+              print(name, "malformed rows:", bad)
+              if bad:
+                  sys.exit(1)
           PY
-          ls -la tv.m3u epg.xml
+          echo "live_count=$n" >> "$GITHUB_OUTPUT"
+          echo "vod_count=$v" >> "$GITHUB_OUTPUT"
 
-      - name: Commit and publish
+      - name: Stage dist/
         run: |
           set -euo pipefail
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tv.m3u epg.xml cache.json
-          if git diff --staged --quiet; then
-            echo "no content changes"
-            git pull --rebase --autostash origin main || true
-            git push origin main || true
-            exit 0
-          fi
-          n=$(grep -c '^#EXTINF' tv.m3u)
-          git commit -m "playlist: $n verified channels ($(date -u +%Y-%m-%d))"
-          # A concurrent local publish may have pushed to main. Rebase onto it
-          # rather than failing the run.
-          git pull --rebase --autostash origin main || git rebase --abort || true
-          git push origin main
+          mkdir -p dist
+          cp tv.m3u vod.m3u epg.xml dist/
+          # robots.txt: the playlists are for the TV, not for search engines
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+          ls -la dist/
 
-      - name: Verify published URL serves the right MIME
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Save probe cache for the next run
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: cache.json
+          key: probe-${{ github.run_id }}
+
+  deploy:
+    name: deploy
+    needs: probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  verify:
+    name: verify
+    needs: [probe, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify the published URLs
         run: |
           set -euo pipefail
-          url="https://beexly.github.io/roku-iptv/tv.m3u"
-          for i in $(seq 1 30); do
-            code=$(curl -s -o /tmp/tv.m3u -w '%{http_code}' "$url" || true)
-            ctype=$(curl -sI "$url" | grep -i '^content-type' | tr -d '\r' || true)
-            echo "attempt $i: $code $ctype"
-            if [ "$code" = "200" ] && echo "$ctype" | grep -qi 'mpegurl'; then
-              head -1 /tmp/tv.m3u | grep -q '^#EXTM3U' && { echo "PUBLISHED OK"; exit 0; }
-            fi
-            sleep 20
-          done
-          echo "publish verification failed"
-          exit 1
+          python verify.py --base "${{ needs.deploy.outputs.page_url }}"
+
+      - name: Write summary
+        run: |
+          {
+            echo "## Roku IPTV refresh"
+            echo ""
+            echo "| Playlist | URL | Count |"
+            echo "|---|---|---|"
+            echo "| Live TV | ${{ needs.deploy.outputs.page_url }}/tv.m3u | ${{ needs.probe.outputs.live_count }} |"
+            echo "| Movies + series | ${{ needs.deploy.outputs.page_url }}/vod.m3u | ${{ needs.probe.outputs.vod_count }} |"
+            echo "| EPG guide | ${{ needs.deploy.outputs.page_url }}/epg.xml | - |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  summary:
+    name: summary
+    needs: [probe, deploy, verify]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job summary
+        run: |
+          echo "live=${{ needs.probe.outputs.live_count }} vod=${{ needs.probe.outputs.vod_count }}" >> "$GITHUB_STEP_SUMMARY"
