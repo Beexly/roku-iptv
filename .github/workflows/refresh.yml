@@ -1,0 +1,128 @@
+name: refresh
+
+# Rebuilds the playlist in cloud CI so the Roku's playlist never depends on
+# the user's laptop being awake. Commits tv.m3u + epg.xml to main, which
+# GitHub Pages publishes at https://beexly.github.io/roku-iptv/
+
+on:
+  schedule:
+    # 04:17 UTC daily. Off the hour on purpose - every workflow in the world
+    # fires at :00 and the shared runner pool is saturated then.
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Ignore the probe cache and re-probe every channel"
+        type: boolean
+        default: false
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      FFPROBE: /usr/bin/ffprobe
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffprobe -version | head -1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache probe results
+        uses: actions/cache@v4
+        with:
+          path: cache.json
+          key: probe-${{ github.run_id }}
+          restore-keys: probe-
+
+      - name: Build verified playlist
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.force }}" = "true" ]; then
+            rm -f cache.json
+          fi
+          python pipeline.py
+
+      - name: Build EPG guide
+        run: |
+          set -euo pipefail
+          curl -sSL --max-time 600 -o epg_raw.xml https://epg.pw/xmltv/epg_US.xml
+          ls -la epg_raw.xml
+          python build_epg.py epg_raw.xml
+          rm -f epg_raw.xml
+
+      - name: Verify outputs
+        run: |
+          set -euo pipefail
+          n=$(grep -c '^#EXTINF' tv.m3u)
+          echo "channels: $n"
+          if [ "$n" -lt 400 ]; then
+            echo "ABORT: only $n channels, refusing to publish"
+            exit 1
+          fi
+          # the first line must be the M3U header
+          head -1 tv.m3u | grep -q '^#EXTM3U' || { echo "bad header"; exit 1; }
+          # every EXTINF must be followed by a URL
+          python - <<'PY'
+          import sys
+          bad = 0
+          prev = None
+          for line in open("tv.m3u", encoding="utf-8", errors="replace"):
+              s = line.strip()
+              if not s:
+                  continue
+              if prev is not None:
+                  if not prev.startswith("#EXTINF"):
+                      bad += 1
+                  prev = None
+                  continue
+              if s.startswith("#EXTINF"):
+                  prev = s
+          print("malformed rows:", bad)
+          sys.exit(1 if bad else 0)
+          PY
+          ls -la tv.m3u epg.xml
+
+      - name: Commit and publish
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tv.m3u epg.xml cache.json
+          if git diff --staged --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          n=$(grep -c '^#EXTINF' tv.m3u)
+          git commit -m "playlist: $n verified channels ($(date -u +%Y-%m-%d))"
+          git push
+
+      - name: Verify published URL serves the right MIME
+        run: |
+          set -euo pipefail
+          url="https://beexly.github.io/roku-iptv/tv.m3u"
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /tmp/tv.m3u -w '%{http_code}' "$url" || true)
+            ctype=$(curl -sI "$url" | grep -i '^content-type' | tr -d '\r' || true)
+            echo "attempt $i: $code $ctype"
+            if [ "$code" = "200" ] && echo "$ctype" | grep -qi 'mpegurl'; then
+              head -1 /tmp/tv.m3u | grep -q '^#EXTM3U' && { echo "PUBLISHED OK"; exit 0; }
+            fi
+            sleep 20
+          done
+          echo "publish verification failed"
+          exit 1
