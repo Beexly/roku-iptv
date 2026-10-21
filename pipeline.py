@@ -273,20 +273,12 @@ def channel_key(info):
 
 
 def rewrite_info(info):
-    """Rewrite an EXTINF line into a publishable one.
+    """Rewrite an EXTINF line onto the canonical category set.
 
-    Replaces the ~70 upstream group labels with the fourteen canonical
-    categories from categories.py, and strips resolution tags and provenance
-    brackets from the display name. tvg-id, tvg-logo and every other attribute
-    are preserved verbatim so EPG matching and artwork keep working.
+    Delegates to categories.rewrite so the pipeline and the offline
+    recategorize.py script cannot drift apart.
     """
-    group = field(info, "group-title")
-    name = display_name(info)
-    category = cats.canonical(group, name, field(info, "tvg-id"))
-    clean = cats.clean_name(name)
-    head = info.rsplit(",", 1)[0]
-    head = re.sub(r'\s*group-title="[^"]*"', "", head).rstrip()
-    return '%s group-title="%s",%s' % (head, category, clean)
+    return cats.rewrite(info)
 
 
 def rank_key(info):

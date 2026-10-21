@@ -143,14 +143,23 @@ function play(item) {
       hls.attachMedia(v);
       hls.on(Hls.Events.ERROR, (e, d) => {
         if (d.fatal) document.getElementById('meta').textContent =
-          'Stream error: ' + d.details;
+          'Stream error: ' + d.details + (d.reason ? ' (' + d.reason + ')' : '');
       });
       v.hls = hls;
     } else {
+      // Safari and iOS play HLS natively.
       v.src = item.url;
     }
   } else {
+    // A progressive file (VOD). If the host does not send CORS headers the
+    // browser refuses it - archive.org's CDN does not - so say so plainly
+    // instead of showing a black rectangle.
     v.src = item.url;
+    v.onerror = () => {
+      document.getElementById('meta').textContent =
+        'This host does not allow browser playback (CORS). ' +
+        'It still works in the Roku app.';
+    };
   }
   v.play().catch(() => {
     document.getElementById('meta').textContent =
