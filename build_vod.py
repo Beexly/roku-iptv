@@ -19,6 +19,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.parse
@@ -132,6 +133,82 @@ def vod_id(identifier):
     return "%s_%s" % (base, digest)
 
 
+def find_ffprobe():
+    """ffprobe for the video check. On PATH in CI, under WinGet on Windows."""
+    import shutil
+    found = shutil.which("ffprobe")
+    if found:
+        return found
+    base = os.path.join(os.environ.get("LOCALAPPDATA", ""),
+                        "Microsoft", "WinGet", "Packages")
+    hits = []
+    if os.path.isdir(base):
+        for root, dirs, files in os.walk(base):
+            if "ffprobe.exe" in files:
+                hits.append(os.path.join(root, "ffprobe.exe"))
+            if len(hits) > 8:
+                break
+    hits.sort(key=lambda p: os.path.getmtime(p), reverse=True)
+    return hits[0] if hits else None
+
+
+def has_video(url, timeout=25):
+    """True when the URL actually carries a video stream."""
+    ffprobe = find_ffprobe()
+    if not ffprobe:
+        return True          # cannot verify: keep the entry rather than cull it
+    cmd = [ffprobe, "-v", "error", "-user_agent", UA, "-rw_timeout", "10000000",
+           "-print_format", "json", "-show_streams", url]
+    try:
+        proc = subprocess.run(cmd, capture_output=True, timeout=timeout, check=False)
+    except (subprocess.TimeoutExpired, OSError):
+        return False
+    if proc.returncode != 0 and not proc.stdout:
+        return False
+    try:
+        payload = json.loads(proc.stdout.decode("utf-8", "replace") or "{}")
+    except json.JSONDecodeError:
+        return False
+    for s in payload.get("streams", []):
+        if s.get("codec_type") == "video" or s.get("width"):
+            return True
+    return False
+
+
+def verify_entries(entries, workers=4, retries=1):
+    """Drop entries that do not actually play.
+
+    Archive.org throttles bursts: probing 8 at a time produced ~90% false
+    failures, while the same URLs probed one at a time played fine. So the
+    concurrency is deliberately low and a failure is retried before the entry
+    is culled.
+    """
+    def check(entry):
+        for attempt in range(retries + 1):
+            if has_video(entry["url"]):
+                return entry, True
+            time.sleep(1.5 * (attempt + 1))
+        return entry, False
+
+    alive = []
+    dropped = 0
+    done = 0
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futs = [pool.submit(check, e) for e in entries]
+        for fut in as_completed(futs):
+            entry, ok = fut.result()
+            done += 1
+            if ok:
+                alive.append(entry)
+            else:
+                dropped += 1
+            if done % 100 == 0:
+                print("  verify %s/%s alive=%s dropped=%s"
+                      % (done, len(entries), len(alive), dropped), flush=True)
+    print("  verified: %s playable, %s dropped" % (len(alive), dropped), flush=True)
+    return alive
+
+
 def main():
     state = {}
     if os.path.isfile(STATE):
@@ -183,12 +260,20 @@ def main():
             })
         stats[group]["collected"] = sum(1 for e in entries if e["group"] == group)
 
-    # ---- verify a sample actually plays, then write
+    # ---- verify every entry actually plays, then write
     print("collected %s entries (%s)"
           % (len(entries), ", ".join("%s=%s" % (k, v.get("collected"))
                                      for k, v in stats.items())), flush=True)
     if len(entries) < 50:
         raise SystemExit("ABORT: only %s VOD entries collected" % len(entries))
+
+    if os.environ.get("VOD_SKIP_VERIFY") != "1":
+        print("verifying every entry plays (low concurrency: archive.org "
+              "throttles bursts)", flush=True)
+        entries = verify_entries(entries,
+                                 workers=int(os.environ.get("VOD_VERIFY_WORKERS", "4")))
+        if len(entries) < 50:
+            raise SystemExit("ABORT: only %s playable VOD entries" % len(entries))
 
     entries.sort(key=lambda e: (e["group"], -e["duration"]))
     tmp = OUT + ".tmp"
