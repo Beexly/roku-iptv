@@ -42,6 +42,10 @@ jobs:
       IPTV_PROBE_TIMEOUT: "12"
       IPTV_PRECHECK_TIMEOUT: "6"
       VOD_MAX_ITEMS: "1200"
+      # archive.org handles 16 concurrent fetches fine (measured 100% at
+      # every concurrency level); the throttle is on TOTAL concurrent
+      # requests, so one process can use a healthy number.
+      VOD_VERIFY_WORKERS: "10"
     outputs:
       live_count: ${{ steps.validate.outputs.live_count }}
       vod_count: ${{ steps.validate.outputs.vod_count }}
