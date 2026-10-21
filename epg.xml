@@ -12,10 +12,6 @@
 <display-name lang="US">AXS TV</display-name>
 <icon src="" />
   </channel>
-  <channel id="GolfChannel.cz@SD">
-<display-name lang="US">Golf Channel HD</display-name>
-<icon src="" />
-  </channel>
   <channel id="QVC3.us@SD">
 <display-name lang="US">QVC3</display-name>
 <icon src="" />
@@ -44,7 +40,7 @@
 <display-name lang="US">MBC America</display-name>
 <icon src="" />
   </channel>
-  <channel id="CNN.us@SD">
+  <channel id="CNN.us@HD">
 <display-name lang="US">CNN HD</display-name>
 <icon src="" />
   </channel>
@@ -354,10 +350,6 @@
   </channel>
   <channel id="AWEPlus.us@SD">
 <display-name lang="US">AWE Plus</display-name>
-<icon src="" />
-  </channel>
-  <channel id="FoxSports.ar@SD">
-<display-name lang="US">Fox Sports 4K</display-name>
 <icon src="" />
   </channel>
   <channel id="ACCDigitalNetwork.us@SD">
@@ -3620,7 +3612,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021000000 +0000" stop="20261021010000 +0000">
+<programme channel="CNN.us@HD" start="20261021000000 +0000" stop="20261021010000 +0000">
 <title lang="zh">Live: Inside Politics With Dana Bash</title>
 <desc>Top political stories researched by top reporters.</desc>
 <date>20261021</date>
@@ -3628,7 +3620,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021010000 +0000" stop="20261021020000 +0000">
+<programme channel="CNN.us@HD" start="20261021010000 +0000" stop="20261021020000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>News from around the world with Brianna Keilar and Boris Sanchez.</desc>
 <date>20261021</date>
@@ -3636,7 +3628,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021020000 +0000" stop="20261021030000 +0000">
+<programme channel="CNN.us@HD" start="20261021020000 +0000" stop="20261021030000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>News from around the world with Brianna Keilar and Boris Sanchez.</desc>
 <date>20261021</date>
@@ -3644,7 +3636,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021030000 +0000" stop="20261021040000 +0000">
+<programme channel="CNN.us@HD" start="20261021030000 +0000" stop="20261021040000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>News from around the world with Brianna Keilar and Boris Sanchez.</desc>
 <date>20261021</date>
@@ -3652,7 +3644,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021040000 +0000" stop="20261021050000 +0000">
+<programme channel="CNN.us@HD" start="20261021040000 +0000" stop="20261021050000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3660,7 +3652,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021050000 +0000" stop="20261021060000 +0000">
+<programme channel="CNN.us@HD" start="20261021050000 +0000" stop="20261021060000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3668,7 +3660,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021060000 +0000" stop="20261021070000 +0000">
+<programme channel="CNN.us@HD" start="20261021060000 +0000" stop="20261021070000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3676,7 +3668,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021070000 +0000" stop="20261021080000 +0000">
+<programme channel="CNN.us@HD" start="20261021070000 +0000" stop="20261021080000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3684,7 +3676,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021080000 +0000" stop="20261021090000 +0000">
+<programme channel="CNN.us@HD" start="20261021080000 +0000" stop="20261021090000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3692,7 +3684,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021090000 +0000" stop="20261021100000 +0000">
+<programme channel="CNN.us@HD" start="20261021090000 +0000" stop="20261021100000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3700,7 +3692,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021100000 +0000" stop="20261021110000 +0000">
+<programme channel="CNN.us@HD" start="20261021100000 +0000" stop="20261021110000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3708,7 +3700,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021110000 +0000" stop="20261021120000 +0000">
+<programme channel="CNN.us@HD" start="20261021110000 +0000" stop="20261021120000 +0000">
 <title lang="zh">Live: Countdown To Election Night</title>
 <desc>The latest news, plus in-depth coverage of the 2026 Midterm elections, tracking the key races, latest polling and issues shaping the final stretch to Election Day.</desc>
 <date>20261021</date>
@@ -3716,7 +3708,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021120000 +0000" stop="20261021130000 +0000">
+<programme channel="CNN.us@HD" start="20261021120000 +0000" stop="20261021130000 +0000">
 <title lang="zh">Live: The Story Is With Elex Michaelson</title>
 <desc>Elex Michaelson tackles the breaking stories making headlines with sharp analysis, fresh perspective and a dose of humor.</desc>
 <date>20261021</date>
@@ -3724,7 +3716,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021130000 +0000" stop="20261021140000 +0000">
+<programme channel="CNN.us@HD" start="20261021130000 +0000" stop="20261021140000 +0000">
 <title lang="zh">Live: The Story Is With Elex Michaelson</title>
 <desc>Elex Michaelson tackles the breaking stories making headlines with sharp analysis, fresh perspective and a dose of humor.</desc>
 <date>20261021</date>
@@ -3732,7 +3724,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021140000 +0000" stop="20261021150000 +0000">
+<programme channel="CNN.us@HD" start="20261021140000 +0000" stop="20261021150000 +0000">
 <title lang="zh">Anderson Cooper 360</title>
 <desc>Anderson Cooper goes beyond the headlines with in-depth reporting and investigations; Anderson keeps his commitment to holding those in power accountable; joining him are guests that frequently include political and legal analysts.</desc>
 <date>20261021</date>
@@ -3740,7 +3732,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021150000 +0000" stop="20261021160000 +0000">
+<programme channel="CNN.us@HD" start="20261021150000 +0000" stop="20261021160000 +0000">
 <title lang="zh">CNN NewsNight With Abby Phillip</title>
 <desc>Abby Phillip leads a roundtable discussion on the day's biggest stories and issues shaping our world.</desc>
 <date>20261021</date>
@@ -3748,7 +3740,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021160000 +0000" stop="20261021170000 +0000">
+<programme channel="CNN.us@HD" start="20261021160000 +0000" stop="20261021170000 +0000">
 <title lang="zh">Anderson Cooper 360</title>
 <desc>Anderson Cooper goes beyond the headlines with in-depth reporting and investigations; Anderson keeps his commitment to holding those in power accountable; joining him are guests that frequently include political and legal analysts.</desc>
 <date>20261021</date>
@@ -3756,7 +3748,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021170000 +0000" stop="20261021180000 +0000">
+<programme channel="CNN.us@HD" start="20261021170000 +0000" stop="20261021180000 +0000">
 <title lang="zh">Live: CNN Headline Express</title>
 <desc>Brad Smith brings you the biggest headlines and most buzzworthy stories.</desc>
 <date>20261021</date>
@@ -3764,7 +3756,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021180000 +0000" stop="20261021190000 +0000">
+<programme channel="CNN.us@HD" start="20261021180000 +0000" stop="20261021190000 +0000">
 <title lang="zh">Live: CNN This Morning</title>
 <desc>Stories from across the world and conversations with Audie Cornish.</desc>
 <date>20261021</date>
@@ -3772,7 +3764,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021190000 +0000" stop="20261021200000 +0000">
+<programme channel="CNN.us@HD" start="20261021190000 +0000" stop="20261021200000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>The latest news from around the world live from CNN's immersive news hub with John Berman, Kate Bolduan and Sara Sidner.</desc>
 <date>20261021</date>
@@ -3780,7 +3772,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021200000 +0000" stop="20261021210000 +0000">
+<programme channel="CNN.us@HD" start="20261021200000 +0000" stop="20261021210000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>The latest news from around the world live from CNN's immersive news hub with John Berman, Kate Bolduan and Sara Sidner.</desc>
 <date>20261021</date>
@@ -3788,7 +3780,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021210000 +0000" stop="20261021220000 +0000">
+<programme channel="CNN.us@HD" start="20261021210000 +0000" stop="20261021220000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>The latest news from around the world live from CNN's immersive news hub with John Berman, Kate Bolduan and Sara Sidner.</desc>
 <date>20261021</date>
@@ -3796,7 +3788,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021220000 +0000" stop="20261021230000 +0000">
+<programme channel="CNN.us@HD" start="20261021220000 +0000" stop="20261021230000 +0000">
 <title lang="zh">Live: The Situation Room</title>
 <desc>Wolf Blitzer and Pamela Brown are in the command center for breaking news, politics and extraordinary reports from around the world.</desc>
 <date>20261021</date>
@@ -3804,7 +3796,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261021230000 +0000" stop="20261022000000 +0000">
+<programme channel="CNN.us@HD" start="20261021230000 +0000" stop="20261022000000 +0000">
 <title lang="zh">Live: The Situation Room</title>
 <desc>Wolf Blitzer and Pamela Brown are in the command center for breaking news, politics and extraordinary reports from around the world.</desc>
 <date>20261021</date>
@@ -3812,7 +3804,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022000000 +0000" stop="20261022010000 +0000">
+<programme channel="CNN.us@HD" start="20261022000000 +0000" stop="20261022010000 +0000">
 <title lang="zh">Live: Inside Politics With Dana Bash</title>
 <desc>Top political stories researched by top reporters.</desc>
 <date>20261022</date>
@@ -3820,7 +3812,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022010000 +0000" stop="20261022020000 +0000">
+<programme channel="CNN.us@HD" start="20261022010000 +0000" stop="20261022020000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>News from around the world with Brianna Keilar and Boris Sanchez.</desc>
 <date>20261022</date>
@@ -3828,7 +3820,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022020000 +0000" stop="20261022030000 +0000">
+<programme channel="CNN.us@HD" start="20261022020000 +0000" stop="20261022030000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>News from around the world with Brianna Keilar and Boris Sanchez.</desc>
 <date>20261022</date>
@@ -3836,7 +3828,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022030000 +0000" stop="20261022040000 +0000">
+<programme channel="CNN.us@HD" start="20261022030000 +0000" stop="20261022040000 +0000">
 <title lang="zh">Live: CNN News Central</title>
 <desc>News from around the world with Brianna Keilar and Boris Sanchez.</desc>
 <date>20261022</date>
@@ -3844,7 +3836,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022040000 +0000" stop="20261022050000 +0000">
+<programme channel="CNN.us@HD" start="20261022040000 +0000" stop="20261022050000 +0000">
 <title lang="zh">Live: The Arena With Kasie Hunt</title>
 <desc>Kasie Hunt brings key players into the arena for sharp analysis and panel discussion on the latest news in politics and culture.</desc>
 <date>20261022</date>
@@ -3852,7 +3844,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022050000 +0000" stop="20261022060000 +0000">
+<programme channel="CNN.us@HD" start="20261022050000 +0000" stop="20261022060000 +0000">
 <title lang="zh">Live: The Lead With Jake Tapper</title>
 <desc>Jake Tapper covers all the day's top stories around the country and the globe, from politics to money and sports to popular culture.</desc>
 <date>20261022</date>
@@ -3860,7 +3852,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022060000 +0000" stop="20261022070000 +0000">
+<programme channel="CNN.us@HD" start="20261022060000 +0000" stop="20261022070000 +0000">
 <title lang="zh">Live: The Lead With Jake Tapper</title>
 <desc>Jake Tapper covers all the day's top stories around the country and the globe, from politics to money and sports to popular culture.</desc>
 <date>20261022</date>
@@ -3868,7 +3860,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022070000 +0000" stop="20261022080000 +0000">
+<programme channel="CNN.us@HD" start="20261022070000 +0000" stop="20261022080000 +0000">
 <title lang="zh">Live: Erin Burnett OutFront</title>
 <desc>Erin Burnett stays ahead of the headlines, delivering a show that's in-depth and informative with compelling interviews, lively debates and analysis of situations.</desc>
 <date>20261022</date>
@@ -3876,7 +3868,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022080000 +0000" stop="20261022090000 +0000">
+<programme channel="CNN.us@HD" start="20261022080000 +0000" stop="20261022090000 +0000">
 <title lang="zh">Live: Anderson Cooper 360</title>
 <desc>Anderson Cooper goes beyond the headlines with in-depth reporting and investigations; Anderson keeps his commitment to holding those in power accountable; joining him are guests that frequently include political and legal analysts.</desc>
 <date>20261022</date>
@@ -3884,7 +3876,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022090000 +0000" stop="20261022100000 +0000">
+<programme channel="CNN.us@HD" start="20261022090000 +0000" stop="20261022100000 +0000">
 <title lang="zh">Live: The Source With Kaitlan Collins</title>
 <desc>Kaitlan Collins is chasing the facts, asking the tough questions and connecting with her sources.</desc>
 <date>20261022</date>
@@ -3892,7 +3884,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022100000 +0000" stop="20261022110000 +0000">
+<programme channel="CNN.us@HD" start="20261022100000 +0000" stop="20261022110000 +0000">
 <title lang="zh">Live: CNN NewsNight With Abby Phillip</title>
 <desc>Abby Phillip leads a roundtable discussion on the day's biggest stories and issues shaping our world.</desc>
 <date>20261022</date>
@@ -3900,7 +3892,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022110000 +0000" stop="20261022120000 +0000">
+<programme channel="CNN.us@HD" start="20261022110000 +0000" stop="20261022120000 +0000">
 <title lang="zh">Laura Coates Live</title>
 <desc>Laura Coates sparks unique conversations and covers the most interesting stories of the day through a news, legal and pop culture lens.</desc>
 <date>20261022</date>
@@ -3908,7 +3900,7 @@
 <stereo>stereo</stereo>
 </audio>
 </programme>
-<programme channel="CNN.us@SD" start="20261022120000 +0000" stop="20261023000000 +0000">
+<programme channel="CNN.us@HD" start="20261022120000 +0000" stop="20261023000000 +0000">
 <title lang="zh">Live: The Story Is With Elex Michaelson</title>
 <desc>Elex Michaelson tackles the breaking stories making headlines with sharp analysis, fresh perspective and a dose of humor.</desc>
 <date>20261022</date>
@@ -32903,222 +32895,6 @@
 <programme channel="ACCDigitalNetwork.us@SD" start="20261022120000 +0000" stop="20261023000000 +0000">
 <title lang="zh">2022 Women's Lacrosse Championship -- Boston College vs. North Carolina</title>
 <desc>The top two teams in the nation in Women's Lacrosse face off for the 2022 ACC Women's Championship. From May 22, 2022.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021010000 +0000" stop="20261021030000 +0000">
-<title lang="zh">Asian Tour Golf</title>
-<desc>Golf action from the Asian Tour.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021030000 +0000" stop="20261021040000 +0000">
-<title lang="zh">Live: Golf Today</title>
-<desc>Damon Hack, Anna Jackson and Eamon Lynch lead and shape the daily conversation throughout the golf world.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021040000 +0000" stop="20261021070000 +0000">
-<title lang="zh">Live: College Golf</title>
-<desc>Coverage of college golf action.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021070000 +0000" stop="20261021080000 +0000">
-<title lang="zh">Live: Golf Central</title>
-<desc>Golf Channel's flagship news program, the nightly "Golf Central" presents highlights from the major golf tours and world events, plus reports and features from tournament sites.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021080000 +0000" stop="20261021090000 +0000">
-<title lang="zh">Live: Charles Schwab Cup Playoffs Preview</title>
-<desc />
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021090000 +0000" stop="20261021120000 +0000">
-<title lang="zh">College Golf</title>
-<desc>Coverage of college golf action.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021120000 +0000" stop="20261021130000 +0000">
-<title lang="zh">Golf Central</title>
-<desc>Golf Channel's flagship news program, the nightly "Golf Central" presents highlights from the major golf tours and world events, plus reports and features from tournament sites.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021130000 +0000" stop="20261021140000 +0000">
-<title lang="zh">Charles Schwab Cup Playoffs Preview</title>
-<desc />
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021140000 +0000" stop="20261021143000 +0000">
-<title lang="zh">PGA Tour -- The Drop</title>
-<desc>Diving into the intensity of tournament play, previewing what's ahead and recapping storylines; giving fans a unique look at the players on and off the course.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021143000 +0000" stop="20261021150000 +0000">
-<title lang="zh">PGA Tour Champions Learning Center</title>
-<desc>Tips and tricks from the legends of the game.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021150000 +0000" stop="20261021180000 +0000">
-<title lang="zh">College Golf</title>
-<desc>Coverage of college golf action.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021180000 +0000" stop="20261021183000 +0000">
-<title lang="zh">PGA Tour -- The Drop</title>
-<desc>Diving into the intensity of tournament play, previewing what's ahead and recapping storylines; giving fans a unique look at the players on and off the course.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021183000 +0000" stop="20261021190000 +0000">
-<title lang="zh">Live: HotelPlannerTour Series H/L</title>
-<desc>Highlights from women's golf.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021190000 +0000" stop="20261021200000 +0000">
-<title lang="zh">Charles Schwab Cup Playoffs Preview</title>
-<desc />
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021200000 +0000" stop="20261021210000 +0000">
-<title lang="zh">Live: 5 Clubs With Gary Williams</title>
-<desc>Viewpoints of people in the game with people who love the game; we discuss what is of interest to them in the vast and deep reservoir of stories within the game of golf.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021210000 +0000" stop="20261021220000 +0000">
-<title lang="zh">Live: The Smylie Show</title>
-<desc>PGA Tour winner Smylie Kaufman shares golf insights and conversations with tour pros and celebs.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021220000 +0000" stop="20261021230000 +0000">
-<title lang="zh">Live: Vanity Index Podcast</title>
-<desc>An offbeat look at the game of golf.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261021230000 +0000" stop="20261022000000 +0000">
-<title lang="zh">5 Clubs With Gary Williams</title>
-<desc>Viewpoints of people in the game with people who love the game; we discuss what is of interest to them in the vast and deep reservoir of stories within the game of golf.</desc>
-<date>20261021</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022000000 +0000" stop="20261022010000 +0000">
-<title lang="zh">The Smylie Show</title>
-<desc>PGA Tour winner Smylie Kaufman shares golf insights and conversations with tour pros and celebs.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022010000 +0000" stop="20261022020000 +0000">
-<title lang="zh">Vanity Index Podcast</title>
-<desc>An offbeat look at the game of golf.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022020000 +0000" stop="20261022023000 +0000">
-<title lang="zh">PGA Tour Champions Learning Center</title>
-<desc>Tips and tricks from the legends of the game.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022023000 +0000" stop="20261022030000 +0000">
-<title lang="zh">PGA Tour -- The Drop</title>
-<desc>Diving into the intensity of tournament play, previewing what's ahead and recapping storylines; giving fans a unique look at the players on and off the course.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022030000 +0000" stop="20261022040000 +0000">
-<title lang="zh">Live: Golf Today</title>
-<desc>Damon Hack, Anna Jackson and Eamon Lynch lead and shape the daily conversation throughout the golf world.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022040000 +0000" stop="20261022070000 +0000">
-<title lang="zh">Live: College Golf</title>
-<desc>Coverage of college golf action.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022070000 +0000" stop="20261022080000 +0000">
-<title lang="zh">Live: Golf Central</title>
-<desc>Golf Channel's flagship news program, the nightly "Golf Central" presents highlights from the major golf tours and world events, plus reports and features from tournament sites.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022080000 +0000" stop="20261022100000 +0000">
-<title lang="zh">College Golf</title>
-<desc>Coverage of college golf action.</desc>
-<date>20261022</date>
-<audio>
-<stereo>stereo</stereo>
-</audio>
-</programme>
-<programme channel="GolfChannel.cz@SD" start="20261022100000 +0000" stop="20261023000000 +0000">
-<title lang="zh">Live: LPGA Tour Golf</title>
-<desc>From Pine Beach Golf Links in Haenam, Republic of Korea.</desc>
 <date>20261022</date>
 <audio>
 <stereo>stereo</stereo>
