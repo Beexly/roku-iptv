@@ -64,6 +64,17 @@ jobs:
           python build_epg.py epg_raw.xml
           rm -f epg_raw.xml
 
+      - name: Build VOD playlist (movies + TV series)
+        run: |
+          set -euo pipefail
+          python build_vod.py
+          n=$(grep -c '^#EXTINF' vod.m3u)
+          echo "vod entries: $n"
+          if [ "$n" -lt 50 ]; then
+            echo "ABORT: only $n VOD entries"
+            exit 1
+          fi
+
       - name: Verify outputs
         run: |
           set -euo pipefail
@@ -75,6 +86,7 @@ jobs:
           fi
           # the first line must be the M3U header
           head -1 tv.m3u | grep -q '^#EXTM3U' || { echo "bad header"; exit 1; }
+          head -1 vod.m3u | grep -q '^#EXTM3U' || { echo "bad vod header"; exit 1; }
           # every EXTINF must be followed by a URL
           python - <<'PY'
           import sys
