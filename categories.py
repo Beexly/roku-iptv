@@ -56,7 +56,12 @@ GROUP_MAP = {
     "film": "Movies",
     "vod": "Movies",
     "classic": "Movies",
-    # No separate Series shelf: films and series share Movies.
+    # The live playlist has no Series shelf - a live "Series" feed is a rerun
+    # channel, not a TV series. The VOD list is different: there, Films and
+    # Series are genuinely different shelves (a film vs an episode), and the
+    # player offers a separate tab for each. canonical() is told which list
+    # it is classifying via the `series_shelf` flag, so the same map serves
+    # both without flattening the VOD library.
     "series": "Movies",
     "kids": "Kids",
     "animation": "Kids",
@@ -152,13 +157,22 @@ def country_code(tvg_id):
     return match.group(1) if match else ""
 
 
-def canonical(group, name="", tvg_id=""):
-    """Map a source group label + channel name + tvg-id to one category."""
+def canonical(group, name="", tvg_id="", series_shelf=False):
+    """Map a source group label + channel name + tvg-id to one category.
+
+    `series_shelf=True` keeps "Series" as its own category. Use it for the
+    VOD list, where a film and an episode are genuinely different things.
+    The live playlist leaves it off, so a live "Series" rerun channel folds
+    into Movies with the rest of the movie channels.
+    """
     code = country_code(tvg_id)
     if code and code not in US_ALIASES:
         return "International"
 
     key = first_group(group).lower()
+    if series_shelf and key in ("series", "films", "film", "movies", "movie"):
+        return {"series": "Series", "films": "Films", "film": "Films",
+                "movies": "Films", "movie": "Films"}[key]
     mapped = GROUP_MAP.get(key)
     if mapped:
         return mapped
@@ -184,6 +198,19 @@ def rank(category):
         return CANON.index(category)
     except ValueError:
         return len(CANON)
+
+
+# Order for the VOD list. "Series" and "Films" are not in CANON (a live
+# playlist has no Series shelf), so they are ranked explicitly here.
+VOD_CANON = ("Films", "Series")
+
+
+def vod_rank(category):
+    """Sort key for the VOD playlist: Films first, then Series."""
+    try:
+        return VOD_CANON.index(category)
+    except ValueError:
+        return len(VOD_CANON)
 
 
 # Upstream names carry quality tags and provenance warnings:

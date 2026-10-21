@@ -259,7 +259,7 @@ def main():
             dur = int(pick["length"]) if pick["length"] else -1
             entries.append({
                 "info": '#EXTINF:-1 tvg-id="vod.%s" group-title="%s",%s'
-                        % (vod_id(ident), cats.canonical(group, label), label),
+                        % (vod_id(ident), cats.canonical(group, label, series_shelf=True), label),
                 "url": url,
                 "group": group,
                 "duration": dur,
@@ -281,7 +281,7 @@ def main():
         if len(entries) < 50:
             raise SystemExit("ABORT: only %s playable VOD entries" % len(entries))
 
-    entries.sort(key=lambda e: (e["group"], -e["duration"]))
+    entries.sort(key=lambda e: (cats.vod_rank(e["group"]), -e["duration"]))
     tmp = OUT + ".tmp"
     with open(tmp, "w", encoding="utf-8", newline="\n") as fh:
         fh.write("#EXTM3U\n")
