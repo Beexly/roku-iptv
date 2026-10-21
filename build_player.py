@@ -80,6 +80,7 @@ function el(tag, attrs, ...kids) {
   for (const [k, v] of Object.entries(attrs || {})) {
     if (k === 'class') n.className = v;
     else if (k === 'text') n.textContent = v;
+    else if (k === 'onerror') n.addEventListener('error', () => { n.style.visibility = 'hidden'; });
     else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
     else n.setAttribute(k, v);
   }
@@ -116,7 +117,7 @@ function render() {
   for (const it of filtered.slice(0, 800)) {
     const card = el('div', {class: 'card', onclick: () => play(it)},
       it.logo ? el('img', {class: 'logo', src: it.logo, loading: 'lazy',
-                            onerror: 'this.style.visibility="hidden"'}) : null,
+                            onerror: 'hide'}) : null,
       el('div', {class: 'nm', text: it.name}));
     grid.append(card);
   }

@@ -26,6 +26,8 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+import categories as cats
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "vod.m3u")
 STATE = os.path.join(ROOT, "vod_state.json")
@@ -257,7 +259,7 @@ def main():
             dur = int(pick["length"]) if pick["length"] else -1
             entries.append({
                 "info": '#EXTINF:-1 tvg-id="vod.%s" group-title="%s",%s'
-                        % (vod_id(ident), group, label),
+                        % (vod_id(ident), cats.canonical(group, label), label),
                 "url": url,
                 "group": group,
                 "duration": dur,

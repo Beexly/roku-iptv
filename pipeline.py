@@ -25,6 +25,8 @@ import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+import categories as cats
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(ROOT, "cache.json")
 TV = os.path.join(ROOT, "tv.m3u")
@@ -124,8 +126,8 @@ NON_LATIN = re.compile(
     "[\u0400-\u04FF\u0530-\u08FF\u3040-\u30FF\u4E00-\u9FFF\u0600-\u06FF"
     "\u0750-\u077F\u0980-\u0DFF\uFB00-\uFB4F\uFE70-\uFEFF]")
 
-PRIORITY = ("sports", "news", "entertainment", "movies", "series", "kids",
-            "animation", "music", "general", "other")
+# Category order lives in categories.py (CANON) so the playlist order and the
+# Xtream API's category order cannot drift apart.
 
 
 # ---------------------------------------------------------------- fetching
@@ -270,44 +272,27 @@ def channel_key(info):
     return "n:" + loose_key(display_name(info))
 
 
-# Source feeds use placeholder group labels that mean nothing to a viewer.
-# "Undefined" is iptv-org's label for a channel with no category; "Generic"
-# and "Other" are HerbertHe's. Collapse them into a real category.
-GROUP_ALIAS = {
-    "undefined": "General",
-    "generic": "General",
-    "other": "General",
-    "x_other": "General",
-    "movies;series": "Movies",
-    "series;movies": "Movies",
-    "entertainment;movies": "Entertainment",
-    "movies;entertainment": "Entertainment",
-    "news;sports": "News",
-    "sports;news": "Sports",
-    "kids;animation": "Kids",
-    "animation;kids": "Kids",
-}
+def rewrite_info(info):
+    """Rewrite an EXTINF line into a publishable one.
 
-
-def normalize_group(info):
-    """Rewrite a placeholder group label to a real category."""
+    Replaces the ~70 upstream group labels with the fourteen canonical
+    categories from categories.py, and strips resolution tags and provenance
+    brackets from the display name. tvg-id, tvg-logo and every other attribute
+    are preserved verbatim so EPG matching and artwork keep working.
+    """
     group = field(info, "group-title")
-    if not group:
-        return info
-    key = group.strip().lower()
-    if key not in GROUP_ALIAS:
-        return info
-    return info.replace('group-title="%s"' % group,
-                        'group-title="%s"' % GROUP_ALIAS[key], 1)
+    name = display_name(info)
+    category = cats.canonical(group, name, field(info, "tvg-id"))
+    clean = cats.clean_name(name)
+    head = info.rsplit(",", 1)[0]
+    head = re.sub(r'\s*group-title="[^"]*"', "", head).rstrip()
+    return '%s group-title="%s",%s' % (head, category, clean)
 
 
 def rank_key(info):
-    group = (field(info, "group-title") or "").lower()
-    first = group.split(";")[0].strip()
-    for idx, key in enumerate(PRIORITY):
-        if key in first:
-            return (idx, normalize_name(display_name(info)))
-    return (len(PRIORITY), normalize_name(display_name(info)))
+    """Sort by canonical category order, then channel name."""
+    return (cats.rank(field(info, "group-title")),
+            normalize_name(display_name(info)))
 
 
 # ---------------------------------------------------------------- probing
@@ -425,7 +410,7 @@ def main():
                 dropped_country += 1
                 continue
             key = channel_key(info)
-            cand = {"info": normalize_group(info), "url": url,
+            cand = {"info": info, "url": url,
                     "weight": src["weight"],
                     "name": name, "tvg": tvg, "src": src["id"],
                     "variant": variant_rank(tvg, info)}
@@ -535,7 +520,7 @@ def main():
         entry = probed.get(h)
         if not entry or not entry.get("ok"):
             continue
-        rows.append((rec["info"], rec["url"]))
+        rows.append((rewrite_info(rec["info"]), rec["url"]))
     rows.sort(key=lambda r: rank_key(r[0]))
 
     print("verified live:", len(rows), flush=True)
