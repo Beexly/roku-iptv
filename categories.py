@@ -200,6 +200,44 @@ def rank(category):
         return len(CANON)
 
 
+# Channels a viewer is most likely to look for first. Within a category these
+# are listed before everything else, so "Sports" opens with ESPN rather than
+# with 30A Golf Kingdom. Matched as whole words against the display name.
+BRANDS = (
+    "espn", "espn2", "espnu", "fox sports", "fs1", "fs2", "cbs sports",
+    "nfl network", "nba tv", "mlb network", "nhl network", "golf channel",
+    "tennis channel", "big ten", "sec network", "acc network",
+    "cnn", "fox news", "msnbc", "nbc news", "abc news", "cbs news",
+    "weather channel", "fox weather", "weathernation",
+    "discovery", "history", "national geographic", "animal planet",
+    "food network", "hgtv", "travel channel", "tlc",
+    "cartoon network", "nickelodeon", "disney", "pbs kids", "boomerang",
+    "mtv", "vh1", "cmt", "bet",
+    "a&e", "usa network", "tnt", "tbs", "amc", "fx", "syfy", "bravo",
+    "comedy central", "paramount", "freeform", "hallmark",
+    "qvc", "hsn",
+)
+
+
+def prominence(name):
+    """0 for a well-known network, 1 for everything else."""
+    low = (name or "").lower()
+    for brand in BRANDS:
+        if brand in low:
+            return 0
+    return 1
+
+
+def sort_key(info):
+    """Playlist order: category, then big brands, then alphabetical.
+
+    The app lists entries in file order, so this is the order a viewer sees.
+    """
+    group = _attr(info, "group-title")
+    label = _label(info)
+    return (rank(group), prominence(label), label.lower())
+
+
 # Order for the VOD list. "Series" and "Films" are not in CANON (a live
 # playlist has no Series shelf), so they are ranked explicitly here.
 VOD_CANON = ("Films", "Series")
@@ -223,7 +261,8 @@ _NOISE = re.compile(
 
 # The published list is US-only, so "ACTV (United States)" is redundant noise.
 _COUNTRY_SUFFIX = re.compile(
-    r"\s*\((?:United States|USA|US)\)\s*$", re.IGNORECASE)
+    r"\s*\((?:United States|USA|US)\)(?=\s*(?:[0-9]{3,4}[pi]|HD|SD|UHD|4K)?\s*$)",
+    re.IGNORECASE)
 
 
 def clean_name(name):

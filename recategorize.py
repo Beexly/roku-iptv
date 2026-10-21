@@ -61,7 +61,7 @@ def rewrite(path):
 
     # The app lists categories in first-seen order, so the file order IS the
     # menu order. Sort by the canonical rank, then by name within a category.
-    entries.sort(key=lambda e: (cats.rank(group_of(e[0])), e[0].lower()))
+    entries.sort(key=lambda e: cats.sort_key(e[0]))
 
     out = [header]
     for info, trailing in entries:

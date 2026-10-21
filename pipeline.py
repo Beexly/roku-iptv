@@ -282,9 +282,8 @@ def rewrite_info(info):
 
 
 def rank_key(info):
-    """Sort by canonical category order, then channel name."""
-    return (cats.rank(field(info, "group-title")),
-            normalize_name(display_name(info)))
+    """Sort by canonical category, then big brands, then name."""
+    return cats.sort_key(info)
 
 
 # ---------------------------------------------------------------- probing
