@@ -119,9 +119,15 @@ jobs:
           set -euo pipefail
           mkdir -p dist
           cp tv.m3u vod.m3u epg.xml dist/
-          # robots.txt: the playlists are for the TV, not for search engines
-          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+          # the viewer setup card: QR code + copy-able URLs
+          python build_setup.py
           ls -la dist/
+
+      - name: Verify the setup card QR is scannable
+        run: |
+          set -euo pipefail
+          pip install --quiet opencv-python-headless numpy
+          python verify_qr.py dist/setup.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
