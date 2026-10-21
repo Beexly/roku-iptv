@@ -79,6 +79,17 @@ def main():
         lk = loose(name)
         if lk:
             want_loose.setdefault(lk, tvg)
+        # The tvg-id carries the channel name too ("Bravo.us@East" -> "Bravo"),
+        # and epg.pw sometimes labels a channel differently from the playlist
+        # ("Bravo HD"). Index both spellings so the guide matches more often.
+        base = tvg.split("@")[0].split(".")[0]
+        if base and base != name:
+            bk = norm(base)
+            if bk:
+                want_norm.setdefault(bk, tvg)
+            bl = loose(base)
+            if bl:
+                want_loose.setdefault(bl, tvg)
     print("playlist tvg-ids: %s (norm=%s loose=%s)"
           % (len(tvgs), len(want_norm), len(want_loose)), flush=True)
 
@@ -103,12 +114,28 @@ def main():
     print("epg channels: %s" % len(epg_name), flush=True)
 
     # ---- match: epg numeric id -> playlist tvg-id
+    #
+    # Two passes. Pass A takes only exact normalized-name matches, so a
+    # channel never gets stolen by a looser match. Pass B then fills the
+    # remaining channels with loose matches, and skips any tvg-id that a
+    # pass-A match already claimed.
     id_map = {}
+    claimed = set()
     for eid, name in epg_name.items():
-        tvg = want_norm.get(norm(name)) or want_loose.get(loose(name))
-        if tvg:
-            id_map.setdefault(eid, tvg)
-    print("matched: %s channels" % len(id_map), flush=True)
+        tvg = want_norm.get(norm(name))
+        if tvg and tvg not in claimed:
+            id_map[eid] = tvg
+            claimed.add(tvg)
+    exact = len(id_map)
+    for eid, name in epg_name.items():
+        if eid in id_map:
+            continue
+        tvg = want_loose.get(loose(name))
+        if tvg and tvg not in claimed:
+            id_map[eid] = tvg
+            claimed.add(tvg)
+    print("matched: %s channels (%s exact, %s loose)"
+          % (len(id_map), exact, len(id_map) - exact), flush=True)
     if not id_map:
         raise SystemExit("no matches - refusing to write an empty guide")
 
