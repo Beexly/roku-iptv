@@ -33,7 +33,9 @@ EPG_OUT = os.path.join(ROOT, "epg.xml")
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36")
-WORKERS = 8
+WORKERS = int(os.environ.get("IPTV_WORKERS", "8"))
+PROBE_TIMEOUT = int(os.environ.get("IPTV_PROBE_TIMEOUT", "12"))
+PRECHECK_TIMEOUT = float(os.environ.get("IPTV_PRECHECK_TIMEOUT", "6"))
 MIN_PUBLISH = 400          # hard floor, never publish below this
 CACHE_TTL_DAYS = 5         # re-probe a healthy channel after this long
 CACHE_MAX_DAYS = 21        # forget a channel entirely after this long
@@ -226,11 +228,34 @@ def has_video(payload):
     return False
 
 
+def precheck(url):
+    """Cheap liveness filter before the expensive ffprobe.
+
+    A range GET for the first bytes of the stream. Dead hosts, 404s and
+    unresolvable DNS fail here in a couple of seconds instead of burning a
+    full ffprobe timeout each. Returns False only when the host is clearly
+    unreachable; True means "worth an ffprobe".
+    """
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA,
+                                                   "Range": "bytes=0-2047"})
+        with urllib.request.urlopen(req, timeout=PRECHECK_TIMEOUT) as resp:
+            resp.read(2048)
+            return True
+    except urllib.error.HTTPError as exc:
+        # 4xx/5xx on the head of the stream still means the host answered
+        return exc.code not in (404, 410)
+    except Exception:
+        return False
+
+
 def probe(url):
+    """Full verification: does this URL actually carry a video stream?"""
     cmd = [FFPROBE, "-v", "error", "-user_agent", UA, "-rw_timeout", "8000000",
            "-print_format", "json", "-show_streams", url]
     try:
-        proc = subprocess.run(cmd, capture_output=True, timeout=12, check=False)
+        proc = subprocess.run(cmd, capture_output=True, timeout=PROBE_TIMEOUT,
+                              check=False)
     except (subprocess.TimeoutExpired, OSError):
         return False
     if proc.returncode != 0 and not proc.stdout:
@@ -328,9 +353,32 @@ def main():
           flush=True)
     done = 0
     live = 0
+
+    # Stage 1: cheap precheck. Dead hosts fail here in ~6s instead of costing
+    # a full ffprobe timeout, which is the difference between a 4 minute run
+    # and a 40 minute one.
+    survivors = []
+    with ThreadPoolExecutor(max_workers=WORKERS * 2) as pool:
+        futs = {pool.submit(precheck, rec["url"]): (key, rec, h)
+                for key, rec, h in to_probe}
+        for fut in as_completed(futs):
+            key, rec, h = futs[fut]
+            done += 1
+            if fut.result():
+                survivors.append((key, rec, h))
+            else:
+                probed[h] = {"ok": False, "ts": now}
+            if done % 100 == 0:
+                print("  precheck %s/%s survivors=%s"
+                      % (done, len(to_probe), len(survivors)), flush=True)
+    print("precheck done: %s/%s reachable, %s dead"
+          % (len(survivors), len(to_probe), len(to_probe) - len(survivors)), flush=True)
+
+    # Stage 2: ffprobe the survivors for a real video stream.
+    done = 0
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         futs = {pool.submit(probe, rec["url"]): (key, rec, h)
-                for key, rec, h in to_probe}
+                for key, rec, h in survivors}
         for fut in as_completed(futs):
             key, rec, h = futs[fut]
             ok = fut.result()
@@ -339,8 +387,8 @@ def main():
             if ok:
                 live += 1
             if done % 50 == 0:
-                print("  progress %s/%s live=%s" % (done, len(to_probe), live), flush=True)
-
+                print("  ffprobe %s/%s live=%s" % (done, len(survivors), live),
+                      flush=True)
     # ---- assemble
     rows = []
     for key, rec in merged.items():
