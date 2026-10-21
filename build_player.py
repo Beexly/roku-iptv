@@ -63,6 +63,8 @@ async function loadM3U(url) {
     } else if (line.startsWith('#')) {
       continue;
     } else if (cur) {
+      // Only http(s): browsers and IPTV apps cannot play rtmp/rtsp/etc.
+      if (!/^https?:\/\//i.test(line)) { cur = null; continue; }
       cur.url = line;
       items.push(cur);
       cur = null;

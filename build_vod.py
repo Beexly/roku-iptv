@@ -34,6 +34,8 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " \
 UA = UA.replace("; Gecko;", ";")
 
 MAX_ITEMS = int(os.environ.get("VOD_MAX_ITEMS", "400"))
+# Only http(s): no IPTV app or browser can play other schemes.
+PLAYABLE_SCHEMES = ("http://", "https://")
 MIN_SIZE_MB = 20
 MIN_SECONDS = 600           # skip shorts/clips
 
@@ -250,6 +252,8 @@ def main():
             title = doc.get("title") or meta.get("metadata", {}).get("title") or ident
             year = doc.get("year") or meta.get("metadata", {}).get("year") or ""
             label = "%s (%s)" % (slug(title), year) if year else slug(title)
+            if not url.lower().startswith(PLAYABLE_SCHEMES):
+                continue
             dur = int(pick["length"]) if pick["length"] else -1
             entries.append({
                 "info": '#EXTINF:-1 tvg-id="vod.%s" group-title="%s",%s'

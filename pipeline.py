@@ -214,6 +214,12 @@ def country_ok(info, name, source):
     return True
 
 
+# Schemes a Roku IPTV app can actually play. RTMP is the common offender:
+# iptv-org carries a few RTMP entries that every player rejects, and they
+# would otherwise show up in the list as permanently dead channels.
+PLAYABLE_SCHEMES = ("http://", "https://")
+
+
 # Country suffixes seen in iptv-org tvg-ids. A US-focused list should not
 # carry Serbian, Dutch, Indian or Brazilian feeds wearing a "Sports" label.
 NON_US_COUNTRIES = {
@@ -406,6 +412,9 @@ def main():
             if not country_ok(info, name, src):
                 continue
             if src.get("sports_only") and "sports" not in group.lower():
+                continue
+            if not url.lower().startswith(PLAYABLE_SCHEMES):
+                # RTMP/RTSP/etc: no IPTV app can play these
                 continue
             tvg = field(info, "tvg-id").strip()
             # A US-focused list should not carry foreign feeds that merely
