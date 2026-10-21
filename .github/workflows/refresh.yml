@@ -134,6 +134,10 @@ jobs:
           python build_setup.py
           # the self-hosted web player: no app purchase, no account, no laptop
           python build_player.py
+          # per-subscriber copies of the public-domain catalogue
+          python subs.py build || true
+          mkdir -p dist/subs
+          cp subs/*.m3u dist/subs/ 2>/dev/null || true
           ls -la dist/
 
       - name: Verify the setup card QR is scannable

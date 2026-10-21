@@ -320,21 +320,28 @@ def precheck(url):
 
 
 def probe(url):
-    """Full verification: does this URL actually carry a video stream?"""
+    """Full verification + resolution. Returns (ok, width, height)."""
     cmd = [FFPROBE, "-v", "error", "-user_agent", UA, "-rw_timeout", "8000000",
            "-print_format", "json", "-show_streams", url]
     try:
         proc = subprocess.run(cmd, capture_output=True, timeout=PROBE_TIMEOUT,
                               check=False)
     except (subprocess.TimeoutExpired, OSError):
-        return False
+        return False, 0, 0
     if proc.returncode != 0 and not proc.stdout:
-        return False
+        return False, 0, 0
     try:
         payload = json.loads(proc.stdout.decode("utf-8", "replace") or "{}")
     except json.JSONDecodeError:
-        return False
-    return has_video(payload)
+        return False, 0, 0
+    if not has_video(payload):
+        return False, 0, 0
+    streams = list(payload.get("streams") or [])
+    for prog in payload.get("programs") or []:
+        streams.extend(prog.get("streams") or [])
+    dims = [(s.get("width") or 0, s.get("height") or 0) for s in streams
+            if s.get("codec_type") == "video" or s.get("width")]
+    return True, max([w for w, _ in dims] or [0]), max([h for _, h in dims] or [0])
 
 
 # ---------------------------------------------------------------- cache
@@ -468,8 +475,8 @@ def main():
                 for key, rec, h in survivors}
         for fut in as_completed(futs):
             key, rec, h = futs[fut]
-            ok = fut.result()
-            probed[h] = {"ok": ok, "ts": now}
+            ok, vw, vh = fut.result()
+            probed[h] = {"ok": ok, "vw": vw, "vh": vh, "ts": now}
             done += 1
             if ok:
                 live += 1
@@ -489,7 +496,8 @@ def main():
             futs = {pool.submit(probe, a): (k, r, a) for k, r, a in alts}
             for fut in as_completed(futs):
                 k, r, a = futs[fut]
-                probed[url_hash(a)] = {"ok": fut.result(), "ts": now}
+                ok, vw, vh = fut.result()
+                probed[url_hash(a)] = {"ok": ok, "vw": vw, "vh": vh, "ts": now}
         recovered = 0
         for k, r in dead:
             for a in (r.get("alts") or []):
@@ -503,6 +511,48 @@ def main():
                     recovered += 1
                     break
         print("failover recovered %s channels" % recovered, flush=True)
+
+    # ---- HD upgrade: a channel verified only in SD may have a sharper
+    # alternate. Probe the alts of every sub-720p primary and swap to the
+    # tallest one that carries video. Cache-aware like the main probe pass,
+    # so the cost is paid once per alt per cache lifetime, not every build.
+    lowres = []
+    for k, r in merged.items():
+        base = probed.get(url_hash(r["url"])) or {}
+        if base.get("ok") and base.get("vh", 0) < 720 and r.get("alts"):
+            fresh = [a for a in r["alts"]
+                     if not ((e := probed.get(url_hash(a)))
+                             and (now - e.get("ts", 0)) < CACHE_TTL_DAYS * 86400)]
+            if fresh:
+                lowres.append((k, r, fresh))
+    if lowres:
+        pairs = [(k, r, a) for k, r, fresh in lowres for a in fresh]
+        print("hd-upgrade: %s SD primaries, %s alt URLs to probe"
+              % (len(lowres), len(pairs)), flush=True)
+        with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+            futs = {pool.submit(probe, a): (k, r, a) for k, r, a in pairs}
+            for fut in as_completed(futs):
+                k, r, a = futs[fut]
+                ok, vw, vh = fut.result()
+                probed[url_hash(a)] = {"ok": ok, "vw": vw, "vh": vh, "ts": now}
+        upgraded = 0
+        for k, r, fresh in lowres:
+            base = probed.get(url_hash(r["url"])) or {}
+            best_vh = base.get("vh", 0)
+            best = None
+            for a in r.get("alts") or []:
+                m = probed.get(url_hash(a)) or {}
+                if m.get("ok") and m.get("vh", 0) > best_vh:
+                    best_vh = m["vh"]
+                    best = a
+            if best:
+                r["url"] = best
+                alt_info = r.get("alt_info", {}).get(best)
+                if alt_info:
+                    r["info"] = alt_info
+                upgraded += 1
+        print("hd-upgrade: %s channels moved to a sharper stream" % upgraded,
+              flush=True)
 
     # ---- assemble
     rows = []
