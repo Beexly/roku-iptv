@@ -80,14 +80,20 @@ def main():
         print("FAIL: no inline SVG QR in %s" % setup)
         return 1
 
-    expected = re.search(r'<p class="url" id="m3u">([^<]+)</p>', html)
-    expected = expected.group(1) if expected else None
-    print("expected playlist URL: %s" % expected)
+    # The page carries the URLs the QRs must decode to, in document order.
+    expected = re.findall(r'<p class="url" id="m3u">([^<]+)</p>', html)
+    player = re.search(r'<a href="([^"]+)"[^>]*>', html)
+    if player:
+        expected.append(player.group(1))
 
+    print("expected targets: %s" % expected)
+
+    decoded = []
     for i, svg in enumerate(svgs):
         grid = matrix_from_svg(svg)
         if not grid:
             print("  svg %d: could not rebuild the module matrix" % i)
+            decoded.append(None)
             continue
         png = os.path.join(OUT, "_qr_check_%d.png" % i)
         matrix_to_png(grid, png)
@@ -95,11 +101,23 @@ def main():
         data, _, _ = cv2.QRCodeDetector().detectAndDecode(img)
         print("  svg %d: %sx%s modules -> decoded %r"
               % (i, len(grid), len(grid[0]), data))
-        if data and expected and data.strip() == expected.strip():
-            print("PASS: the QR decodes to the playlist URL")
-            return 0
-        print("  MISMATCH")
-    print("FAIL: no QR in the setup card decodes to the playlist URL")
+        decoded.append(data)
+
+    ok = True
+    for want, got in zip(expected, decoded):
+        if not want:
+            continue
+        if not got or got.strip() != want.strip():
+            print("  MISMATCH: wanted %r got %r" % (want, got))
+            ok = False
+    if len(decoded) != len(expected):
+        print("  count mismatch: %s QR codes, %s targets"
+              % (len(decoded), len(expected)))
+        ok = False
+    if ok and decoded:
+        print("PASS: every QR on the page decodes to its URL")
+        return 0
+    print("FAIL: not every QR decodes to its URL")
     return 1
 
 

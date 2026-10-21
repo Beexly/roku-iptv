@@ -28,12 +28,18 @@ BASE = os.environ.get("SITE_BASE", "https://beexly.github.io/roku-iptv")
 M3U = BASE + "/tv.m3u"
 VOD = BASE + "/vod.m3u"
 EPG = BASE + "/epg.xml"
+PLAYER = BASE + "/player.html"
 
 APP_NAME = "Xtream IPTV Player"
 APP_ID = "814924"
-APP_NOTE = ("Channel Store id %s. It is free. In its setup screen choose "
-            "\"Add playlist\" and either scan the QR code or paste the URL."
-            % APP_ID)
+# The app's own listing says it plays "streaming URLs and Xtream Codes API
+# credentials". Its "scan to add a playlist" QR opens the vendor's website
+# (which is account-gated), so the URL field is the path that needs no
+# account and no purchase.
+APP_NOTE = ("Channel Store id %s. It is free and its listing says it plays "
+            "streaming URLs. In the app go to Settings, add a playlist, and "
+            "choose the M3U URL option - do NOT use the scan QR, that opens "
+            "the vendor's account page." % APP_ID)
 
 
 def qr_svg(data, box=10, border=2):
@@ -50,9 +56,13 @@ def qr_svg(data, box=10, border=2):
 
 def page(m3u_url, epg_url, extra_blocks=""):
     qr = qr_svg(m3u_url)
+    qr_player = qr_svg(PLAYER)
     # strip the XML declaration so the SVG can be inlined in HTML
     qr = qr.replace('<?xml version="1.0" standalone="yes"?>', "")
     qr = qr.replace("<svg ", '<svg role="img" aria-label="QR code for the playlist URL" ', 1)
+    qr_player = qr_player.replace('<?xml version="1.0" standalone="yes"?>', "")
+    qr_player = qr_player.replace(
+        "<svg ", '<svg role="img" aria-label="QR code for the web player" ', 1)
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,28 +93,31 @@ def page(m3u_url, epg_url, extra_blocks=""):
 <h1>Your Roku IPTV playlist</h1>
 <p class="sub">One playlist, rebuilt daily. No account, no subscription, no setup on a computer.</p>
 
-<h2>1. Scan this on the TV</h2>
-<p>The TV's player has a <strong>scan to add a playlist</strong> option. Point your phone's camera at the code and hand the phone the link, or type the URL by hand from the line below.</p>
-<div class="qr">{qr}</div>
-<p class="note">If the TV's scanner is on-screen, scan with any phone camera app first, then paste the link it opens into the TV.</p>
-
-<h2>2. The playlist URL</h2>
+<h2>1. The playlist URL</h2>
 <p class="url" id="m3u">{m3u}</p>
 <button onclick="navigator.clipboard.writeText(document.getElementById('m3u').textContent)">Copy playlist URL</button>
+<p class="note">This is the one thing you have to type into the TV. Everything else refreshes on its own. The code below carries the same URL if you would rather scan it with a phone.</p>
+<div class="qr">{qr}</div>
 
-<h2>3. The guide URL (optional)</h2>
+<h2>2. The guide URL (optional)</h2>
 <p class="note">Add this in the player's EPG / XMLTV setting if it has one. It is a separate field - not all players take a guide URL at all.</p>
 <p class="url" id="epg">{epg}</p>
 <button onclick="navigator.clipboard.writeText(document.getElementById('epg').textContent)">Copy guide URL</button>
 
-<h2>4. The app</h2>
+<h2>3. In the app</h2>
 <p>Use <strong>{app_name}</strong> (Roku Channel Store). {app_note}</p>
 <ol>
-  <li>Install {app_name} from the Roku Channel Store.</li>
-  <li>Open it and choose <strong>Add playlist</strong>.</li>
-  <li>Scan the code above, or paste the playlist URL.</li>
-  <li>Pick the live-TV categories you want and save. That is it.</li>
+  <li>Install {app_name} from the Roku Channel Store if it is not already there.</li>
+  <li>Open it and go to <strong>Settings</strong> -&gt; add a playlist -&gt; choose the <strong>M3U URL</strong> option.</li>
+  <li>Paste the playlist URL above and save.</li>
+  <li>Pick the live-TV categories you want. That is it.</li>
 </ol>
+
+<h2>4. Or play it right here, with no app at all</h2>
+<p>This site also hosts a <strong>web player</strong> that reads the same playlist. Open it on a phone or tablet and cast it to the Roku, or just watch it in the browser. Nothing to buy, nothing to sign up for, and it works even if the TV has no IPTV app installed.</p>
+<p><a href="{player}" style="font-size:1.05rem">{player}</a></p>
+<div class="qr">{qr_player}</div>
+<p class="note">Scan that code with a phone to open the web player, then use the Roku's screen mirroring or cast to send it to the TV.</p>
 
 {extra}
 <footer>
@@ -114,7 +127,8 @@ def page(m3u_url, epg_url, extra_blocks=""):
 </footer>
 </body>
 </html>
-""".format(qr=qr, m3u=html.escape(m3u_url), epg=html.escape(epg_url),
+""".format(qr=qr, qr_player=qr_player, m3u=html.escape(m3u_url),
+           epg=html.escape(epg_url), player=html.escape(PLAYER),
            app_name=html.escape(APP_NAME), app_note=html.escape(APP_NOTE),
            extra=extra_blocks)
 

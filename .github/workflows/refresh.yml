@@ -132,6 +132,8 @@ jobs:
           cp tv.m3u vod.m3u epg.xml dist/
           # the viewer setup card: QR code + copy-able URLs
           python build_setup.py
+          # the self-hosted web player: no app purchase, no account, no laptop
+          python build_player.py
           ls -la dist/
 
       - name: Verify the setup card QR is scannable
