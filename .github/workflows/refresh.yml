@@ -134,6 +134,8 @@ jobs:
           python build_setup.py
           # the self-hosted web player: no app purchase, no account, no laptop
           python build_player.py
+          # the Apollo TV-style streaming portal: embedded playlist, no app needed
+          python build_portal.py
           # per-subscriber copies of the public-domain catalogue
           python subs.py build || true
           mkdir -p dist/subs
@@ -192,6 +194,8 @@ jobs:
         run: |
           set -euo pipefail
           python verify.py --base "${{ needs.deploy.outputs.page_url }}"
+          # the portal page must load and contain the embedded playlist
+          curl -sSL --fail --max-time 120 -o /dev/null "${{ needs.deploy.outputs.page_url }}/portal.html"
 
       - name: Write summary
         run: |
